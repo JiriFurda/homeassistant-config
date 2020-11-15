@@ -1,0 +1,58 @@
+- id: '1591991243529'
+  name: Maximum
+  entities:
+    light.0x680ae2fffe5e602c_light:
+      brightness: 252
+      color_temp: 153
+      friendly_name: Obývací pokoj
+      max_mireds: 500
+      min_mireds: 153
+      state: 'on'
+      supported_features: 43
+      update_available: true
+- id: '1591991295351'
+  name: Minimum
+  entities:
+    light.0x680ae2fffe5e602c_light:
+      min_mireds: 153
+      max_mireds: 500
+      brightness: 1
+      color_temp: 369
+      update_available: true
+      state: 'on'
+      friendly_name: Main Light
+      supported_features: 43
+- id: '1604180881474'
+  name: TV
+  entities:
+    light.0x680ae2fffee3c000_light:
+      min_mireds: 153
+      max_mireds: 500
+      brightness: 172
+      color_temp: 376
+      hs_color:
+      - 36.894
+      - 63.137
+      rgb_color:
+      - 255
+      - 192
+      - 94
+      xy_color:
+      - 0.492
+      - 0.413
+      state: 'on'
+      color:
+        x: 0.491
+        y: 0.415
+      linkquality: 70
+      friendly_name: Lamp
+      supported_features: 59
+    light.0x680ae2fffe5e602c_light:
+      min_mireds: 153
+      max_mireds: 500
+      update_available: true
+      state: 'off'
+      brightness: 0
+      color_temp: 369
+      friendly_name: Main Light
+      supported_features: 43

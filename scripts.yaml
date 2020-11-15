@@ -1,0 +1,365 @@
+tv_toggle:
+  alias: TV Toggle
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: television
+      command: Power
+  mode: single
+  icon: mdi:power
+tv_volume_up:
+  alias: TV Volume Up
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: television
+      command: Volume up
+  mode: single
+  icon: mdi:volume-plus
+tv_volume_down:
+  alias: TV Volume Down
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: television
+      command: Volume down
+  mode: single
+  icon: mdi:volume-minus
+tv_input:
+  alias: TV Input
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: television
+      command: Input
+  mode: single
+  icon: mdi:video-input-hdmi
+tv_mute:
+  alias: TV Mute
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: television
+      command: Mute
+  mode: single
+  icon: mdi:volume-off
+setobox_toggle:
+  alias: Setobox Toggle
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: setobox
+      command: Power
+  mode: single
+  icon: mdi:antenna
+setobox_channel_up:
+  alias: Setobox Channel Up
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: setobox
+      command: Channel up
+  mode: single
+  icon: mdi:chevron-up
+setobox_channel_down:
+  alias: Setobox Channel Down
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: setobox
+      command: Channel down
+  mode: single
+  icon: mdi:chevron-down
+setobox_one:
+  alias: Setobox One
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: setobox
+      command: One
+setobox_two:
+  alias: Setobox Two
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: setobox
+      command: Two
+setobox_three:
+  alias: Setobox Three
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: setobox
+      command: Three
+setobox_four:
+  alias: Setobox Four
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: setobox
+      command: Four
+setobox_five:
+  alias: Setobox Five
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: setobox
+      command: Five
+setobox_six:
+  alias: Setobox Six
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: setobox
+      command: Six
+setobox_seven:
+  alias: Setobox Seven
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: setobox
+      command: Seven
+setobox_eight:
+  alias: Setobox Eight
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: setobox
+      command: Eight
+setobox_nine:
+  alias: Setobox Nine
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: setobox
+      command: Nine
+setobox_zero:
+  alias: Setobox Zero
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: setobox
+      command: Zero
+setobox_epg:
+  alias: Setobox EPG
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: setobox
+      command: EPG
+  mode: single
+  icon: mdi:timetable
+setobox_info:
+  alias: Setobox Info
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: setobox
+      command: Info
+setobox_exit:
+  alias: Setobox Exit
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: setobox
+      command: Exit
+meter_one:
+  alias: TV Meter One
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: TV meter
+      command: One
+  mode: single
+  icon: mdi:face-woman-outline
+meter_two:
+  alias: TV Meter Two
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: TV meter
+      command: Two
+  mode: single
+  icon: mdi:face
+tv_toggle_meter_one:
+  alias: Tv Toggle + Meter One
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: television
+      command:
+      - Power
+      - TV Meter One
+      delay_secs: 10
+tv_toggle_meter_two:
+  alias: Tv Toggle + Meter Two
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: television
+      command:
+      - Power
+      - TV Meter Two
+      delay_secs: 10
+tv_volume_up_2:
+  alias: TV Volume Up By 2
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: television
+      command: Volume up
+      num_repeats: 2
+      delay_secs: 1
+tv_volume_up_3:
+  alias: TV Volume Up By 3
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: television
+      command: Volume up
+      num_repeats: 3
+      delay_secs: 1
+tv_volume_up_4:
+  alias: TV Volume Up By 4
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: television
+      command: Volume up
+      num_repeats: 4
+      delay_secs: 1
+tv_volume_up_5:
+  alias: TV Volume Up By 5
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: television
+      command: Volume up
+      num_repeats: 5
+      delay_secs: 1
+tv_volume_up_10:
+  alias: TV Volume Up By 10
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: television
+      command: Volume up
+      num_repeats: 10
+      delay_secs: 1
+tv_volume_down_2:
+  alias: TV Volume Down By 2
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: television
+      command: Volume down
+      num_repeats: 2
+      delay_secs: 1
+tv_volume_down_3:
+  alias: TV Volume Down By 3
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: television
+      command: Volume down
+      num_repeats: 3
+      delay_secs: 1
+tv_volume_down_4:
+  alias: TV Volume Down By 4
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: television
+      command: Volume down
+      num_repeats: 4
+      delay_secs: 1
+tv_volume_down_5:
+  alias: TV Volume Down By 5
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: television
+      command: Volume down
+      num_repeats: 5
+      delay_secs: 1
+tv_volume_down_10:
+  alias: TV Volume Down By 10
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: television
+      command: Volume down
+      num_repeats: 10
+      delay_secs: 1
+setobox_prima_cool:
+  alias: Prima Cool
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: setobox
+      command:
+      - Eight
+      - Ok
+      delay_secs: 0.3
+  mode: single
+broadlink_test:
+  alias: Test Broadliink
+  sequence:
+  - service: remote.learn_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: test
+      command: Test
+learn_tv_meter_commands:
+  sequence:
+    - service: remote.learn_command
+      data:
+        entity_id: remote.bedroom
+        device: TV meter
+        command:
+          - one_2_1
+          - one_2_2
+          - one_2_3
+          - one_2_4
+          - one_2_5
+          - one_2_6
+          - one_2_7
+          - one_2_8
+          - one_2_9
+          - one_2_10

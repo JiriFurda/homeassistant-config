@@ -1,0 +1,8 @@
+  zigbee_permit_join:
+    name: Spustit párování
+    initial: off
+    icon: mdi:cellphone-wireless
+  automations_enabled:
+    name: Automatizace povoleny
+    initial: on
+    icon: mdi:cog-outline
