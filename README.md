@@ -15,7 +15,7 @@ My personal smart home configuration. The system is running [Home Assistant](htt
 | [Raspberry Cooling](https://www.aliexpress.com/item/32945772706.html) | 36.6 CZK | Control Unit |
 | [USB3 Sata Cable](https://www.aliexpress.com/item/4000966208077.html) | 59.24 CZK | Control Unit |
 | [Aqara Wall Switch D1](https://www.aliexpress.com/item/4000804886280.html) | 570.43 CZK | Controller |
-Sum: 4 470.67 CZK
+| Sum | 4 470.67 CZK | n/a | 
 
 ### Connected Devices
 PlayStation 4
