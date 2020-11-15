@@ -1,0 +1,265 @@
+{
+    "version": 1,
+    "key": "lovelace",
+    "data": {
+        "config": {
+            "views": [
+                {
+                    "title": "Hlavn\u00ed",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "cards": [
+                                {
+                                    "entity": "light.0x680ae2fffe5e602c_light",
+                                    "type": "light"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "scene.focus_mode"
+                                        },
+                                        {
+                                            "entity": "scene.tv_time"
+                                        }
+                                    ],
+                                    "title": "Sc\u00e9ny",
+                                    "type": "entities"
+                                }
+                            ],
+                            "type": "vertical-stack"
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "script.tv_toggle",
+                                            "show_name": true,
+                                            "name": "TV"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "script.setobox_toggle",
+                                            "show_name": true,
+                                            "name": "Setobox"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "media_player.playstation_4",
+                                            "show_name": true,
+                                            "name": "PS4"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "script.tv_input",
+                                            "show_name": true,
+                                            "name": "Input"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "script.tv_volume_up",
+                                            "show_name": true,
+                                            "name": "Vol +"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "script.tv_volume_down",
+                                            "show_name": true,
+                                            "name": "Vol -"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "script.setobox_channel_up",
+                                            "show_name": true,
+                                            "name": "Ch +"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "script.setobox_channel_down",
+                                            "show_name": true,
+                                            "name": "Ch -"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "script.tv_mute",
+                                            "show_name": true,
+                                            "name": "Mute"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "script.setobox_epg",
+                                            "show_name": true,
+                                            "name": "EPG"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "script.meter_one",
+                                            "name": "Vendula"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "script.meter_two",
+                                            "show_state": false,
+                                            "show_icon": true,
+                                            "name": "Ji\u0159\u00ed"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "entity": "light.0x680ae2fffee3c000_light",
+                            "type": "light"
+                        },
+                        {
+                            "entity": "media_player.playstation_4",
+                            "type": "media-control"
+                        },
+                        {
+                            "entity": "media_player.living_room_speaker",
+                            "type": "media-control"
+                        }
+                    ]
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.stav_usb_zigbee"
+                                },
+                                {
+                                    "entity": "input_boolean.zigbee_permit_join"
+                                },
+                                {
+                                    "entity": "timer.zigbee_permit_join"
+                                }
+                            ],
+                            "title": "USB Zigbee",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "sensor.cpu_temperature"
+                            ],
+                            "hours_to_show": 24,
+                            "refresh_interval": 0,
+                            "type": "history-graph"
+                        },
+                        {
+                            "type": "entity",
+                            "entity": "input_boolean.automations_enabled"
+                        }
+                    ],
+                    "path": "",
+                    "title": "Nastaven\u00ed"
+                },
+                {
+                    "title": "Test",
+                    "path": "test",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "horizontal-stack",
+                            "cards": [
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "call-service",
+                                        "service": "remote.send_command",
+                                        "service_data": {
+                                            "entity_id": "remote.broadlink_rm4_pro_remote",
+                                            "device": "TV meter",
+                                            "command": "One"
+                                        }
+                                    },
+                                    "entity": "remote.broadlink_rm4_pro_remote",
+                                    "name": "One 0"
+                                },
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "call-service",
+                                        "service": "remote.send_command",
+                                        "service_data": {
+                                            "entity_id": "remote.broadlink_rm4_pro_remote",
+                                            "device": "TV meter",
+                                            "command": "one_1"
+                                        }
+                                    },
+                                    "entity": "remote.broadlink_rm4_pro_remote",
+                                    "name": "One 1"
+                                },
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "call-service",
+                                        "service": "remote.send_command",
+                                        "service_data": {
+                                            "entity_id": "remote.broadlink_rm4_pro_remote",
+                                            "device": "TV meter",
+                                            "command": "one_2"
+                                        }
+                                    },
+                                    "entity": "remote.broadlink_rm4_pro_remote",
+                                    "name": "One 2"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

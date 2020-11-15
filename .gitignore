@@ -1,0 +1,11 @@
+*.log
+*.db
+
+# Configuration files
+ip_bans.yaml
+secrets.yaml
+
+# Folders
+deps
+secrets
+tts
