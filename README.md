@@ -15,6 +15,12 @@ My personal smart home configuration. The system is running [Home Assistant](htt
 | [Raspberry Cooling](https://www.aliexpress.com/item/32945772706.html) | 36.6 CZK | Control Unit |
 | [USB3 Sata Cable](https://www.aliexpress.com/item/4000966208077.html) | 59.24 CZK | Control Unit |
 | [Aqara Wall Switch D1](https://www.aliexpress.com/item/4000804886280.html) | 570.43 CZK | Controller |
+Sum: 4 470.67 CZK
 
 ### Connected Devices
 PlayStation 4
+
+## Tutorials used
+* [Zigbee USB (in Czech)](https://www.youtube.com/watch?v=44rLBgWpdgg)
+* [Mapping IKEA TRADFRI remote in NodeRED](https://notenoughtech.com/home-automation/mapping-ikea-tradfri-remote-in-nodered/)
+* [Expose Home Assistant through an SSH tunnel](https://carly.be/expose-home-assistant-through-ssh-tunnel/)
