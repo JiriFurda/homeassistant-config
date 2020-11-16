@@ -11,11 +11,11 @@ My personal smart home configuration. The system is running [Home Assistant](htt
 | [CC Debugger](https://www.aliexpress.com/item/32813122315.html) | 168.66 CZK | Control Unit |
 | [Downloader Cable](https://www.aliexpress.com/item/32853531081.html) | 39.7 CZK | Control Unit |
 | [Immax 07115L](https://www.immax.cz/immax-neo-smart-zarovka-led-e27-9w-rgb-cct-barevna-a-bila-stmivatelna-zigbee-3-0.html) | 350 CZK | Lighting |
-| [Broadlink RM Pro RM4](https://www.aliexpress.com/item/32793393049.html) | 750 CZK | Control Unit |
+| [Broadlink RM Pro RM4](https://www.aliexpress.com/item/32793393049.html) | 1 030.69 CZK | Control Unit |
 | [Raspberry Cooling](https://www.aliexpress.com/item/32945772706.html) | 36.6 CZK | Control Unit |
 | [USB3 Sata Cable](https://www.aliexpress.com/item/4000966208077.html) | 59.24 CZK | Control Unit |
 | [Aqara Wall Switch D1](https://www.aliexpress.com/item/4000804886280.html) | 570.43 CZK | Controller |
-| Sum | 4 470.67 CZK | n/a | 
+| Sum | 4 751.36 CZK | n/a | 
 
 ### Connected Devices
 PlayStation 4
