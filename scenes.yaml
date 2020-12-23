@@ -11,10 +11,10 @@
       - channel_change
       - finish_effect
       - stop_effect
-      brightness: 251
+      brightness: 254
       color_temp: 153
-      linkquality: 94
-      state: 'off'
+      linkquality: 99
+      state: 'on'
       update:
         state: available
       update_available: true
@@ -34,10 +34,10 @@
       - channel_change
       - finish_effect
       - stop_effect
-      brightness: 251
-      color_temp: 153
-      linkquality: 94
-      state: 'off'
+      brightness: 3
+      color_temp: 500
+      linkquality: 99
+      state: 'on'
       update:
         state: available
       update_available: true
