@@ -1,58 +1,150 @@
 - id: '1591991243529'
   name: Maximum
   entities:
-    light.0x680ae2fffe5e602c_light:
-      brightness: 252
-      color_temp: 153
-      friendly_name: Obývací pokoj
-      max_mireds: 500
+    light.living_room_light_light:
       min_mireds: 153
-      state: 'on'
-      supported_features: 43
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      brightness: 251
+      color_temp: 153
+      linkquality: 94
+      state: 'off'
+      update:
+        state: available
       update_available: true
+      friendly_name: Main Light
+      supported_features: 47
+  icon: mdi:brightness-7
 - id: '1591991295351'
   name: Minimum
   entities:
-    light.0x680ae2fffe5e602c_light:
+    light.living_room_light_light:
       min_mireds: 153
       max_mireds: 500
-      brightness: 1
-      color_temp: 369
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      brightness: 251
+      color_temp: 153
+      linkquality: 94
+      state: 'off'
+      update:
+        state: available
       update_available: true
-      state: 'on'
       friendly_name: Main Light
-      supported_features: 43
+      supported_features: 47
+  icon: mdi:brightness-5
 - id: '1604180881474'
   name: TV
   entities:
-    light.0x680ae2fffee3c000_light:
+    light.living_room_lamp_light:
       min_mireds: 153
       max_mireds: 500
-      brightness: 172
-      color_temp: 376
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      brightness: 171
+      color_temp: 372
       hs_color:
-      - 36.894
-      - 63.137
+      - 36.375
+      - 62.745
       rgb_color:
       - 255
       - 192
-      - 94
+      - 95
       xy_color:
-      - 0.492
-      - 0.413
-      state: 'on'
+      - 0.491
+      - 0.412
       color:
-        x: 0.491
-        y: 0.415
-      linkquality: 70
+        x: 0.492
+        y: 0.413
+      linkquality: 78
+      state: 'on'
       friendly_name: Lamp
-      supported_features: 59
-    light.0x680ae2fffe5e602c_light:
+      supported_features: 63
+    light.living_room_light_light:
       min_mireds: 153
       max_mireds: 500
-      update_available: true
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      brightness: 251
+      color_temp: 153
+      linkquality: 94
       state: 'off'
-      brightness: 0
-      color_temp: 369
+      update:
+        state: available
+      update_available: true
       friendly_name: Main Light
-      supported_features: 43
+      supported_features: 47
+  icon: mdi:television
+- id: '1606680339871'
+  name: Christmas
+  entities:
+    light.living_room_lamp_light:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      brightness: 254
+      color_temp: 37
+      hs_color:
+      - 0
+      - 100
+      rgb_color:
+      - 255
+      - 0
+      - 0
+      xy_color:
+      - 0.701
+      - 0.299
+      color:
+        x: 0.701
+        y: 0.299
+      linkquality: 70
+      state: 'on'
+      friendly_name: Lamp
+      supported_features: 63
+    light.living_room_light_light:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      brightness: 251
+      color_temp: 153
+      linkquality: 94
+      state: 'off'
+      update:
+        state: available
+      update_available: true
+      friendly_name: Main Light
+      supported_features: 47
+  icon: mdi:pine-tree

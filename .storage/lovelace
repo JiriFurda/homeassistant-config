@@ -11,20 +11,34 @@
                         {
                             "cards": [
                                 {
-                                    "entity": "light.0x680ae2fffe5e602c_light",
-                                    "type": "light"
+                                    "entity": "light.living_room_light_light",
+                                    "type": "light",
+                                    "hold_action": {
+                                        "action": "more-info"
+                                    }
                                 },
                                 {
-                                    "entities": [
+                                    "type": "vertical-stack",
+                                    "cards": [
                                         {
-                                            "entity": "scene.focus_mode"
-                                        },
-                                        {
-                                            "entity": "scene.tv_time"
+                                            "type": "entities",
+                                            "entities": [
+                                                {
+                                                    "entity": "scene.focus_mode"
+                                                },
+                                                {
+                                                    "entity": "scene.tv_time"
+                                                },
+                                                {
+                                                    "entity": "scene.tv"
+                                                },
+                                                {
+                                                    "entity": "scene.christmas"
+                                                }
+                                            ],
+                                            "title": "Sc\u00e9ny"
                                         }
-                                    ],
-                                    "title": "Sc\u00e9ny",
-                                    "type": "entities"
+                                    ]
                                 }
                             ],
                             "type": "vertical-stack"
@@ -158,7 +172,7 @@
                             ]
                         },
                         {
-                            "entity": "light.0x680ae2fffee3c000_light",
+                            "entity": "light.living_room_lamp_light",
                             "type": "light"
                         },
                         {
@@ -254,6 +268,23 @@
                                     },
                                     "entity": "remote.broadlink_rm4_pro_remote",
                                     "name": "One 2"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "horizontal-stack",
+                            "cards": [
+                                {
+                                    "type": "light",
+                                    "entity": "light.0x680ae2fffee3c000_light"
+                                },
+                                {
+                                    "type": "light",
+                                    "entity": "light.0x842e14fffe140b07_light"
+                                },
+                                {
+                                    "type": "light",
+                                    "entity": "light.0x680ae2fffe5e602c_light"
                                 }
                             ]
                         }

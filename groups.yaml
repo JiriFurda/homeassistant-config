@@ -1,0 +1,14 @@
+  kitchen_light:
+    name: Kitchen Light
+    entities:
+      - light.kitchen_light_1_light
+  living_room_lights:
+    name: Living Room Lights
+    entities:
+      - light.living_room_main_light_light
+      - light.living_room_lamp_light
+  living_room_kitchen_lights:
+    name: Living Room and Kitchen Lights
+    entities:
+      - group.kitchen_light
+      - group.living_room_kitchen_light
