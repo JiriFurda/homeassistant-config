@@ -44,6 +44,10 @@
                             "type": "vertical-stack"
                         },
                         {
+                            "entity": "light.living_room_lamp_light",
+                            "type": "light"
+                        },
+                        {
                             "type": "vertical-stack",
                             "cards": [
                                 {
@@ -172,8 +176,14 @@
                             ]
                         },
                         {
-                            "entity": "light.living_room_lamp_light",
-                            "type": "light"
+                            "type": "button",
+                            "tap_action": {
+                                "action": "toggle"
+                            },
+                            "entity": "switch.christmas_tree_light_switch",
+                            "icon": "mdi:pine-tree",
+                            "show_state": false,
+                            "name": "Christmas Tree"
                         },
                         {
                             "entity": "media_player.playstation_4",

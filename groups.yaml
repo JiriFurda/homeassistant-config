@@ -12,3 +12,7 @@
     entities:
       - group.kitchen_light
       - group.living_room_kitchen_light
+  living_room_switches:
+    name: Living Room Switches
+    entities:
+      - switch.christmas_tree_light_switch
