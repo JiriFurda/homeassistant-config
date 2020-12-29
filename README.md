@@ -14,7 +14,9 @@ My personal smart home configuration. The system is running [Home Assistant](htt
 | [Broadlink RM Pro RM4](https://www.aliexpress.com/item/32793393049.html) | 1 030.69 CZK | Control Unit |
 | [Raspberry Cooling](https://www.aliexpress.com/item/32945772706.html) | 36.6 CZK | Control Unit |
 | [USB3 Sata Cable](https://www.aliexpress.com/item/4000966208077.html) | 59.24 CZK | Control Unit |
-| Sum | 4 180.93 CZK | n/a | 
+| [Patriot PBU120GS25SSDR](https://www.mironet.cz/patriot-burst-120gb-25quot-sata-iii-tlc-r-560mbps-w540-mbps-iops-50k-40k-mtbf-2mh-3y+dp352013/) | 455 CZK | Control Unit |
+| [Immax 07048L](https://www.alza.cz/immax-neo-smart-zasuvka-d5569071.htm) | 289 CZK | Socket |
+| Sum | 4 924.93 CZK | n/a | 
 
 ### Connected Devices
 PlayStation 4
