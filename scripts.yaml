@@ -8,6 +8,32 @@ tv_toggle:
       command: Power
   mode: single
   icon: mdi:power
+tv_on:
+  alias: TV On
+  sequence:
+  - condition: state
+    entity_id: binary_sensor.lg_tv
+    state: 'off'
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: television
+      command: Power
+  mode: single
+  icon: mdi:power
+tv_off:
+  alias: TV Off
+  sequence:
+  - condition: state
+    entity_id: binary_sensor.lg_tv
+    state: 'on'
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: television
+      command: Power
+  mode: single
+  icon: mdi:power 
 tv_volume_up:
   alias: TV Volume Up
   sequence:
@@ -338,6 +364,33 @@ setobox_prima_cool:
       - Ok
       delay_secs: 0.3
   mode: single
+setobox_on:
+  alias: Setobox On
+  sequence:
+  - condition: state
+    entity_id: binary_sensor.setobox_state
+    state: 'off'
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: setobox
+      command: Power
+  mode: single
+  icon: mdi:antenna
+setobox_off:
+  alias: Setobox Off
+  sequence:
+  - condition: state
+    entity_id: binary_sensor.setobox_state
+    state: 'on'
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: setobox
+      command: Power
+  mode: single
+  icon: mdi:antenna  
+  
 broadlink_test:
   alias: Test Broadliink
   sequence:
@@ -363,3 +416,27 @@ learn_tv_meter_commands:
           - one_2_8
           - one_2_9
           - one_2_10
+living_room_off:
+  alias: Living Room Off
+  sequence:
+  - service: light.turn_off
+    data:
+      entity_id: group.living_room_lights
+  - service: script.setobox_off
+  - service: script.tv_off
+  mode: single
+
+#meter_presence:
+#  alias: TV Meter Automatic
+#  sequence:
+#  - sequence:
+#    - condition: state
+#      entity_id: person.vendula_cincurova
+#      state: 'home'
+#    - service: script.meter_one 
+#  - delay: 0.1
+#  - sequence:
+#    - condition: state
+#      entity_id: person.jiri_furda
+#      state: 'home'
+#    - service: script.meter_two   

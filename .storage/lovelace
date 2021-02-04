@@ -58,18 +58,20 @@
                                             "tap_action": {
                                                 "action": "toggle"
                                             },
-                                            "entity": "script.tv_toggle",
+                                            "entity": "media_player.living_room_tv",
                                             "show_name": true,
-                                            "name": "TV"
+                                            "name": "TV",
+                                            "icon": "mdi:television"
                                         },
                                         {
                                             "type": "button",
                                             "tap_action": {
                                                 "action": "toggle"
                                             },
-                                            "entity": "script.setobox_toggle",
+                                            "entity": "media_player.setobox",
                                             "show_name": true,
-                                            "name": "Setobox"
+                                            "name": "Setobox",
+                                            "icon": "mdi:antenna"
                                         },
                                         {
                                             "type": "button",
@@ -174,16 +176,6 @@
                                     ]
                                 }
                             ]
-                        },
-                        {
-                            "type": "button",
-                            "tap_action": {
-                                "action": "toggle"
-                            },
-                            "entity": "switch.christmas_tree_light_switch",
-                            "icon": "mdi:pine-tree",
-                            "show_state": false,
-                            "name": "Christmas Tree"
                         },
                         {
                             "entity": "media_player.playstation_4",
@@ -297,6 +289,10 @@
                                     "entity": "light.0x680ae2fffe5e602c_light"
                                 }
                             ]
+                        },
+                        {
+                            "type": "media-control",
+                            "entity": "media_player.living_room_tv"
                         }
                     ]
                 }

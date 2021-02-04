@@ -4,6 +4,7 @@ default_config:
 # Text to speech
 tts:
   - platform: google_translate
+    language: 'cs'
 
 group: !include groups.yaml
 automation: !include automations.yaml
@@ -12,16 +13,14 @@ scene: !include scenes.yaml
 sensor: !include sensors.yaml
 input_boolean: !include input_booleans.yaml
 timer: !include timers.yaml
+binary_sensor: !include binary_sensors.yaml
+media_player: !include media_players.yaml
 
 google_assistant:
-  project_id: home-assistant-55697
+  project_id: home-assistant-new-5b1c8
   service_account: !include secrets/service_account.json
   report_state: true
-  expose_by_default: false
-  exposed_domains:
-    - switch
-    - light
-    - scene
-    - media_player
-    - input_boolean
-    - script
+  
+smartir:
+    
+browser_mod:

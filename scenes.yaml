@@ -45,7 +45,7 @@
       supported_features: 47
   icon: mdi:brightness-5
 - id: '1604180881474'
-  name: TV
+  name: TV Mode
   entities:
     light.living_room_lamp_light:
       min_mireds: 153
@@ -57,22 +57,22 @@
       - channel_change
       - finish_effect
       - stop_effect
-      brightness: 171
-      color_temp: 372
+      brightness: 170
+      color_temp: 378
       hs_color:
-      - 36.375
-      - 62.745
+      - 36.226
+      - 62.353
       rgb_color:
       - 255
-      - 192
+      - 191
       - 95
       xy_color:
-      - 0.491
-      - 0.412
+      - 0.492
+      - 0.411
       color:
-        x: 0.492
-        y: 0.413
-      linkquality: 78
+        x: 0.491
+        y: 0.412
+      linkquality: 89
       state: 'on'
       friendly_name: Lamp
       supported_features: 63
@@ -86,9 +86,9 @@
       - channel_change
       - finish_effect
       - stop_effect
-      brightness: 251
-      color_temp: 153
-      linkquality: 94
+      brightness: 3
+      color_temp: 500
+      linkquality: 105
       state: 'off'
       update:
         state: available
@@ -148,3 +148,54 @@
       friendly_name: Main Light
       supported_features: 47
   icon: mdi:pine-tree
+- id: '1612024131437'
+  name: Barča
+  entities:
+    light.living_room_light_light:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      brightness: 253
+      color_temp: 153
+      linkquality: 63
+      state: 'off'
+      update:
+        state: available
+      update_available: true
+      friendly_name: Main Light
+      supported_features: 47
+    light.living_room_lamp_light:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      brightness: 189
+      color_temp: 162
+      hs_color:
+      - 266.842
+      - 14.902
+      rgb_color:
+      - 233
+      - 216
+      - 255
+      xy_color:
+      - 0.313
+      - 0.286
+      color:
+        x: 0.315
+        y: 0.287
+      linkquality: 86
+      state: 'on'
+      friendly_name: Lamp
+      supported_features: 63

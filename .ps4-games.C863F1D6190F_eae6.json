@@ -23,51 +23,69 @@
         "media_content_type": "app",
         "locked": false
     },
-    "CUSA04053": {
-        "media_title": "HBO GO",
-        "media_image_url": "https://store.playstation.com/store/api/chihiro/00_09_000/container/CZ/en/19/EP8841-CUSA04053_00-WEBMAF00000HBOGO/1607041044000/image",
-        "media_content_type": "app",
-        "locked": false
-    },
-    "CUSA09558": {
-        "media_title": "Knowledge is Power",
-        "media_image_url": "https://store.playstation.com/store/api/chihiro/00_09_000/container/CZ/en/19/EP9000-CUSA09558_00-1711171432KPE4M0/1607434799000/image",
-        "media_content_type": "game",
-        "locked": false
-    },
-    "CUSA01116": {
-        "media_title": "YouTube",
-        "media_image_url": "https://store.playstation.com/store/api/chihiro/00_09_000/container/CZ/en/19/EP4381-CUSA01116_00-YOUTUBESCEE00000/1607043249000/image",
-        "media_content_type": "app",
-        "locked": false
-    },
-    "CUSA01433": {
-        "media_title": "Rocket League\u00ae",
-        "media_image_url": "https://store.playstation.com/store/api/chihiro/00_09_000/container/CZ/en/19/EP2002-CUSA01433_00-ROCKETLEAGUEEU01/1608628260000/image",
-        "media_content_type": "game",
-        "locked": false
-    },
     "CUSA14876": {
         "media_title": "Crash\u2122 Team Racing Nitro-Fueled",
         "media_image_url": "https://store.playstation.com/store/api/chihiro/00_09_000/container/CZ/en/19/EP0002-CUSA14876_00-CRASHTEAMRACING1/1608628307000/image",
         "media_content_type": "game",
         "locked": false
     },
-    "CUSA01703": {
-        "media_title": "Plex",
-        "media_image_url": "https://store.playstation.com/store/api/chihiro/00_09_000/container/CZ/en/19/EP4544-CUSA01703_00-WEBMAF000000PLEX/1606784454000/image",
-        "media_content_type": "app",
-        "locked": false
-    },
-    "CUSA18100": {
-        "media_title": "Mafia: Definitivn\u00ed edice",
-        "media_image_url": null,
-        "media_content_type": null,
-        "locked": false
-    },
     "CUSA06014": {
         "media_title": "TEKKEN 7",
         "media_image_url": "https://store.playstation.com/store/api/chihiro/00_09_000/container/CZ/en/19/EP0700-CUSA06014_00-PS4TEKKEN7000001/1608628361000/image",
+        "media_content_type": "game",
+        "locked": false
+    },
+    "CUSA23470": {
+        "media_title": "Crash Bandicoot\u2122 4: It\u2019s About Time",
+        "media_image_url": "https://store.playstation.com/store/api/chihiro/00_09_000/titlecontainer/cz/en/999/CUSA23470_00/image",
+        "media_content_type": "game",
+        "locked": false
+    },
+    "CUSA04053": {
+        "media_title": "HBO GO",
+        "media_image_url": "https://store.playstation.com/store/api/chihiro/00_09_000/titlecontainer/cz/en/999/CUSA04053_00/image",
+        "media_content_type": "app",
+        "locked": false
+    },
+    "CUSA08389": {
+        "media_title": "That\u2019s You!",
+        "media_image_url": "https://store.playstation.com/store/api/chihiro/00_09_000/titlecontainer/cz/en/999/CUSA08389_00/image",
+        "media_content_type": "game",
+        "locked": false
+    },
+    "CUSA12381": {
+        "media_title": "CHIMPARTY Pre-order",
+        "media_image_url": "https://store.playstation.com/store/api/chihiro/00_09_000/titlecontainer/cz/en/999/CUSA12381_00/image",
+        "media_content_type": "game",
+        "locked": false
+    },
+    "CUSA01116": {
+        "media_title": "YouTube",
+        "media_image_url": "https://store.playstation.com/store/api/chihiro/00_09_000/titlecontainer/cz/en/999/CUSA01116_00/image",
+        "media_content_type": "app",
+        "locked": false
+    },
+    "CUSA09558": {
+        "media_title": "Knowledge is Power",
+        "media_image_url": "https://store.playstation.com/store/api/chihiro/00_09_000/titlecontainer/cz/en/999/CUSA09558_00/image",
+        "media_content_type": "game",
+        "locked": false
+    },
+    "CUSA01703": {
+        "media_title": "Plex",
+        "media_image_url": "https://store.playstation.com/store/api/chihiro/00_09_000/titlecontainer/cz/en/999/CUSA01703_00/image",
+        "media_content_type": "app",
+        "locked": false
+    },
+    "CUSA01433": {
+        "media_title": "ROCKET LEAGUE",
+        "media_image_url": "https://store.playstation.com/store/api/chihiro/00_09_000/titlecontainer/cz/en/999/CUSA01433_00/image",
+        "media_content_type": "game",
+        "locked": false
+    },
+    "CUSA18100": {
+        "media_title": "Mafia: Definitive Edition Pre-Order",
+        "media_image_url": "https://store.playstation.com/store/api/chihiro/00_09_000/titlecontainer/cz/en/999/CUSA18100_00/image",
         "media_content_type": "game",
         "locked": false
     }
