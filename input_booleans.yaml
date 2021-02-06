@@ -6,3 +6,7 @@
     name: Automatizace povoleny
     initial: on
     icon: mdi:cog-outline
+  party:
+    name: Party Lights
+    icon: mdi:music-note
+    initial: off

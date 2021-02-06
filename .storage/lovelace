@@ -34,6 +34,9 @@
                                                 },
                                                 {
                                                     "entity": "scene.christmas"
+                                                },
+                                                {
+                                                    "entity": "input_boolean.party"
                                                 }
                                             ],
                                             "title": "Sc\u00e9ny"
@@ -293,13 +296,6 @@
                         {
                             "type": "media-control",
                             "entity": "media_player.living_room_tv"
-                        },
-                        {
-                            "type": "button",
-                            "tap_action": {
-                                "action": "toggle"
-                            },
-                            "entity": "switch.party"
                         }
                     ]
                 }
