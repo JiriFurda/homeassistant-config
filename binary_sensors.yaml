@@ -4,6 +4,6 @@
         friendly_name: "Setobox State"
         value_template: "{{ states('sensor.setobox_switch_power')|float > 1 }}"
   - platform: ping
-    host: 192.168.88.202
+    host: 192.168.0.202
     name: "LG TV"
     scan_interval: 4
