@@ -15,6 +15,7 @@ input_boolean: !include input_booleans.yaml
 timer: !include timers.yaml
 binary_sensor: !include binary_sensors.yaml
 media_player: !include media_players.yaml
+light: !include lights.yaml
 
 google_assistant:
   project_id: home-assistant-new-5b1c8
@@ -24,3 +25,10 @@ google_assistant:
 smartir:
     
 browser_mod:
+
+device_tracker:
+  - platform: bluetooth_tracker
+  
+spotify:
+  client_id: b5e9102ce29943bba9940ab3fa48a814
+  client_secret: !secret spotify_secret

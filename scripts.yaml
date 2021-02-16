@@ -421,7 +421,10 @@ living_room_off:
   sequence:
   - service: light.turn_off
     data:
-      entity_id: group.living_room_lights
+      entity_id: light.living_room_light_light
+  - service: light.turn_off
+    data:
+      entity_id: light.living_room_lamp_light
   - service: script.setobox_off
   - service: script.tv_off
   mode: single
