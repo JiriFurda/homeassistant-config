@@ -5,7 +5,7 @@
         "config": {
             "views": [
                 {
-                    "title": "Hlavn\u00ed",
+                    "title": "Ob\u00fdvac\u00ed pokoj",
                     "badges": [],
                     "cards": [
                         {
@@ -191,6 +191,75 @@
                     ]
                 },
                 {
+                    "title": "Koupelna",
+                    "path": "koupelna",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "entity",
+                            "entity": "input_select.washing_machine_status"
+                        },
+                        {
+                            "type": "entity",
+                            "entity": "timer.washing_machine"
+                        }
+                    ]
+                },
+                {
+                    "title": "Nastaven\u00ed",
+                    "path": "nastaveni",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "input_boolean.dnd"
+                                }
+                            ],
+                            "title": "Stavy"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "input_boolean.automation_dnd"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Z\u00e1kladn\u00ed"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "input_boolean.automation_plex_pause_light"
+                                },
+                                {
+                                    "entity": "input_boolean.automation_ps4_light"
+                                }
+                            ],
+                            "title": "M\u00e9dia",
+                            "show_header_toggle": true
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "input_boolean.automation_washing_machine"
+                                },
+                                {
+                                    "entity": "switch.adguard_protection",
+                                    "name": "Blokov\u00e1n\u00ed reklam"
+                                }
+                            ],
+                            "title": "Dal\u0161\u00ed"
+                        }
+                    ]
+                },
+                {
+                    "path": "",
+                    "title": "Pokro\u010dil\u00e9 nastaven\u00ed",
                     "badges": [],
                     "cards": [
                         {
@@ -215,87 +284,6 @@
                             "hours_to_show": 24,
                             "refresh_interval": 0,
                             "type": "history-graph"
-                        },
-                        {
-                            "type": "entity",
-                            "entity": "input_boolean.automations_enabled"
-                        }
-                    ],
-                    "path": "",
-                    "title": "Nastaven\u00ed"
-                },
-                {
-                    "title": "Test",
-                    "path": "test",
-                    "badges": [],
-                    "cards": [
-                        {
-                            "type": "horizontal-stack",
-                            "cards": [
-                                {
-                                    "type": "button",
-                                    "tap_action": {
-                                        "action": "call-service",
-                                        "service": "remote.send_command",
-                                        "service_data": {
-                                            "entity_id": "remote.broadlink_rm4_pro_remote",
-                                            "device": "TV meter",
-                                            "command": "One"
-                                        }
-                                    },
-                                    "entity": "remote.broadlink_rm4_pro_remote",
-                                    "name": "One 0"
-                                },
-                                {
-                                    "type": "button",
-                                    "tap_action": {
-                                        "action": "call-service",
-                                        "service": "remote.send_command",
-                                        "service_data": {
-                                            "entity_id": "remote.broadlink_rm4_pro_remote",
-                                            "device": "TV meter",
-                                            "command": "one_1"
-                                        }
-                                    },
-                                    "entity": "remote.broadlink_rm4_pro_remote",
-                                    "name": "One 1"
-                                },
-                                {
-                                    "type": "button",
-                                    "tap_action": {
-                                        "action": "call-service",
-                                        "service": "remote.send_command",
-                                        "service_data": {
-                                            "entity_id": "remote.broadlink_rm4_pro_remote",
-                                            "device": "TV meter",
-                                            "command": "one_2"
-                                        }
-                                    },
-                                    "entity": "remote.broadlink_rm4_pro_remote",
-                                    "name": "One 2"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "horizontal-stack",
-                            "cards": [
-                                {
-                                    "type": "light",
-                                    "entity": "light.0x680ae2fffee3c000_light"
-                                },
-                                {
-                                    "type": "light",
-                                    "entity": "light.0x842e14fffe140b07_light"
-                                },
-                                {
-                                    "type": "light",
-                                    "entity": "light.0x680ae2fffe5e602c_light"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "media-control",
-                            "entity": "media_player.living_room_tv"
                         }
                     ]
                 }

@@ -1,0 +1,9 @@
+washing_machine_status:
+  name: Washing Machine Status
+  options:
+    - "Off"
+    - "Starting"
+    - "On"
+    - "Standby"
+  initial: "Off"
+  icon: mdi:washing-machine

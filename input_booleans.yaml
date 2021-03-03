@@ -1,11 +1,27 @@
+# Automation switches
+  automation_ps4_light:
+    name: Ztlumení světla při zapnutí Play Station
+    initial: off
+  automation_plex_pause_light:
+    name: Rozsvícení světla při stopnutí přehrávání Plex
+    initial: on
+  automation_washing_machine:
+    name: Oznámení dokončení cyklu pračky
+    initial: on
+  automation_dnd:
+    name: Automatické zapnutí/vypnutí módu nerušit
+    initial: on
+
+# Variables
+  dnd:
+    name: Mód nerušit
+    initial: off
+
+# Other
   zigbee_permit_join:
     name: Spustit párování
     initial: off
     icon: mdi:cellphone-wireless
-  automations_enabled:
-    name: Automatizace povoleny
-    initial: on
-    icon: mdi:cog-outline
   party:
     name: Party Lights
     icon: mdi:music-note

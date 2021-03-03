@@ -1,3 +1,7 @@
   zigbee_permit_join:
     name: Zbývající čas k párování
-    duration: 600 # Čas v sekundách, tj. 10min. 
+    duration: 600
+    
+  washing_machine:
+    name: Zbývající čas praní
+    duration: 840

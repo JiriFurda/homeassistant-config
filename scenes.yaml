@@ -34,9 +34,9 @@
       - channel_change
       - finish_effect
       - stop_effect
-      brightness: 3
+      brightness: 5
       color_temp: 500
-      linkquality: 99
+      linkquality: 55
       state: 'on'
       update:
         state: available
