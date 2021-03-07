@@ -1,59 +1,3 @@
-tv_toggle:
-  alias: TV Toggle
-  sequence:
-  - service: remote.send_command
-    data:
-      entity_id: remote.broadlink_rm4_pro_remote
-      device: television
-      command: Power
-  mode: single
-  icon: mdi:power
-tv_on:
-  alias: TV On
-  sequence:
-  - condition: state
-    entity_id: binary_sensor.lg_tv
-    state: 'off'
-  - service: remote.send_command
-    data:
-      entity_id: remote.broadlink_rm4_pro_remote
-      device: television
-      command: Power
-  mode: single
-  icon: mdi:power
-tv_off:
-  alias: TV Off
-  sequence:
-  - condition: state
-    entity_id: binary_sensor.lg_tv
-    state: 'on'
-  - service: remote.send_command
-    data:
-      entity_id: remote.broadlink_rm4_pro_remote
-      device: television
-      command: Power
-  mode: single
-  icon: mdi:power 
-tv_volume_up:
-  alias: TV Volume Up
-  sequence:
-  - service: remote.send_command
-    data:
-      entity_id: remote.broadlink_rm4_pro_remote
-      device: television
-      command: Volume up
-  mode: single
-  icon: mdi:volume-plus
-tv_volume_down:
-  alias: TV Volume Down
-  sequence:
-  - service: remote.send_command
-    data:
-      entity_id: remote.broadlink_rm4_pro_remote
-      device: television
-      command: Volume down
-  mode: single
-  icon: mdi:volume-minus
 tv_input:
   alias: TV Input
   sequence:
@@ -64,26 +8,6 @@ tv_input:
       command: Input
   mode: single
   icon: mdi:video-input-hdmi
-tv_mute:
-  alias: TV Mute
-  sequence:
-  - service: remote.send_command
-    data:
-      entity_id: remote.broadlink_rm4_pro_remote
-      device: television
-      command: Mute
-  mode: single
-  icon: mdi:volume-off
-setobox_toggle:
-  alias: Setobox Toggle
-  sequence:
-  - service: remote.send_command
-    data:
-      entity_id: remote.broadlink_rm4_pro_remote
-      device: setobox
-      command: Power
-  mode: single
-  icon: mdi:antenna
 setobox_channel_up:
   alias: Setobox Channel Up
   sequence:
@@ -94,96 +18,6 @@ setobox_channel_up:
       command: Channel up
   mode: single
   icon: mdi:chevron-up
-setobox_channel_down:
-  alias: Setobox Channel Down
-  sequence:
-  - service: remote.send_command
-    data:
-      entity_id: remote.broadlink_rm4_pro_remote
-      device: setobox
-      command: Channel down
-  mode: single
-  icon: mdi:chevron-down
-setobox_one:
-  alias: Setobox One
-  sequence:
-  - service: remote.send_command
-    data:
-      entity_id: remote.broadlink_rm4_pro_remote
-      device: setobox
-      command: One
-setobox_two:
-  alias: Setobox Two
-  sequence:
-  - service: remote.send_command
-    data:
-      entity_id: remote.broadlink_rm4_pro_remote
-      device: setobox
-      command: Two
-setobox_three:
-  alias: Setobox Three
-  sequence:
-  - service: remote.send_command
-    data:
-      entity_id: remote.broadlink_rm4_pro_remote
-      device: setobox
-      command: Three
-setobox_four:
-  alias: Setobox Four
-  sequence:
-  - service: remote.send_command
-    data:
-      entity_id: remote.broadlink_rm4_pro_remote
-      device: setobox
-      command: Four
-setobox_five:
-  alias: Setobox Five
-  sequence:
-  - service: remote.send_command
-    data:
-      entity_id: remote.broadlink_rm4_pro_remote
-      device: setobox
-      command: Five
-setobox_six:
-  alias: Setobox Six
-  sequence:
-  - service: remote.send_command
-    data:
-      entity_id: remote.broadlink_rm4_pro_remote
-      device: setobox
-      command: Six
-setobox_seven:
-  alias: Setobox Seven
-  sequence:
-  - service: remote.send_command
-    data:
-      entity_id: remote.broadlink_rm4_pro_remote
-      device: setobox
-      command: Seven
-setobox_eight:
-  alias: Setobox Eight
-  sequence:
-  - service: remote.send_command
-    data:
-      entity_id: remote.broadlink_rm4_pro_remote
-      device: setobox
-      command: Eight
-setobox_nine:
-  alias: Setobox Nine
-  sequence:
-  - service: remote.send_command
-    data:
-      entity_id: remote.broadlink_rm4_pro_remote
-      device: setobox
-      command: Nine
-setobox_zero:
-  alias: Setobox Zero
-  sequence:
-  - service: remote.send_command
-    data:
-      entity_id: remote.broadlink_rm4_pro_remote
-      device: setobox
-      command: Zero
 setobox_epg:
   alias: Setobox EPG
   sequence:
@@ -194,22 +28,6 @@ setobox_epg:
       command: EPG
   mode: single
   icon: mdi:timetable
-setobox_info:
-  alias: Setobox Info
-  sequence:
-  - service: remote.send_command
-    data:
-      entity_id: remote.broadlink_rm4_pro_remote
-      device: setobox
-      command: Info
-setobox_exit:
-  alias: Setobox Exit
-  sequence:
-  - service: remote.send_command
-    data:
-      entity_id: remote.broadlink_rm4_pro_remote
-      device: setobox
-      command: Exit
 meter_one:
   alias: TV Meter One
   sequence:
@@ -252,106 +70,6 @@ tv_toggle_meter_two:
       - Power
       - TV Meter Two
       delay_secs: 10
-tv_volume_up_2:
-  alias: TV Volume Up By 2
-  sequence:
-  - service: remote.send_command
-    data:
-      entity_id: remote.broadlink_rm4_pro_remote
-      device: television
-      command: Volume up
-      num_repeats: 2
-      delay_secs: 1
-tv_volume_up_3:
-  alias: TV Volume Up By 3
-  sequence:
-  - service: remote.send_command
-    data:
-      entity_id: remote.broadlink_rm4_pro_remote
-      device: television
-      command: Volume up
-      num_repeats: 3
-      delay_secs: 1
-tv_volume_up_4:
-  alias: TV Volume Up By 4
-  sequence:
-  - service: remote.send_command
-    data:
-      entity_id: remote.broadlink_rm4_pro_remote
-      device: television
-      command: Volume up
-      num_repeats: 4
-      delay_secs: 1
-tv_volume_up_5:
-  alias: TV Volume Up By 5
-  sequence:
-  - service: remote.send_command
-    data:
-      entity_id: remote.broadlink_rm4_pro_remote
-      device: television
-      command: Volume up
-      num_repeats: 5
-      delay_secs: 1
-tv_volume_up_10:
-  alias: TV Volume Up By 10
-  sequence:
-  - service: remote.send_command
-    data:
-      entity_id: remote.broadlink_rm4_pro_remote
-      device: television
-      command: Volume up
-      num_repeats: 10
-      delay_secs: 1
-tv_volume_down_2:
-  alias: TV Volume Down By 2
-  sequence:
-  - service: remote.send_command
-    data:
-      entity_id: remote.broadlink_rm4_pro_remote
-      device: television
-      command: Volume down
-      num_repeats: 2
-      delay_secs: 1
-tv_volume_down_3:
-  alias: TV Volume Down By 3
-  sequence:
-  - service: remote.send_command
-    data:
-      entity_id: remote.broadlink_rm4_pro_remote
-      device: television
-      command: Volume down
-      num_repeats: 3
-      delay_secs: 1
-tv_volume_down_4:
-  alias: TV Volume Down By 4
-  sequence:
-  - service: remote.send_command
-    data:
-      entity_id: remote.broadlink_rm4_pro_remote
-      device: television
-      command: Volume down
-      num_repeats: 4
-      delay_secs: 1
-tv_volume_down_5:
-  alias: TV Volume Down By 5
-  sequence:
-  - service: remote.send_command
-    data:
-      entity_id: remote.broadlink_rm4_pro_remote
-      device: television
-      command: Volume down
-      num_repeats: 5
-      delay_secs: 1
-tv_volume_down_10:
-  alias: TV Volume Down By 10
-  sequence:
-  - service: remote.send_command
-    data:
-      entity_id: remote.broadlink_rm4_pro_remote
-      device: television
-      command: Volume down
-      num_repeats: 10
-      delay_secs: 1
 setobox_prima_cool:
   alias: Prima Cool
   sequence:
@@ -364,58 +82,6 @@ setobox_prima_cool:
       - Ok
       delay_secs: 0.3
   mode: single
-setobox_on:
-  alias: Setobox On
-  sequence:
-  - condition: state
-    entity_id: binary_sensor.setobox_state
-    state: 'off'
-  - service: remote.send_command
-    data:
-      entity_id: remote.broadlink_rm4_pro_remote
-      device: setobox
-      command: Power
-  mode: single
-  icon: mdi:antenna
-setobox_off:
-  alias: Setobox Off
-  sequence:
-  - condition: state
-    entity_id: binary_sensor.setobox_state
-    state: 'on'
-  - service: remote.send_command
-    data:
-      entity_id: remote.broadlink_rm4_pro_remote
-      device: setobox
-      command: Power
-  mode: single
-  icon: mdi:antenna  
-  
-broadlink_test:
-  alias: Test Broadliink
-  sequence:
-  - service: remote.learn_command
-    data:
-      entity_id: remote.broadlink_rm4_pro_remote
-      device: test
-      command: Test
-learn_tv_meter_commands:
-  sequence:
-    - service: remote.learn_command
-      data:
-        entity_id: remote.bedroom
-        device: TV meter
-        command:
-          - one_2_1
-          - one_2_2
-          - one_2_3
-          - one_2_4
-          - one_2_5
-          - one_2_6
-          - one_2_7
-          - one_2_8
-          - one_2_9
-          - one_2_10
 living_room_off:
   alias: Living Room Off
   sequence:
@@ -428,74 +94,74 @@ living_room_off:
   - service: script.setobox_off
   - service: script.tv_off
   mode: single
-
-#meter_presence:
-#  alias: TV Meter Automatic
-#  sequence:
-#  - sequence:
-#    - condition: state
-#      entity_id: person.vendula_cincurova
-#      state: 'home'
-#    - service: script.meter_one 
-#  - delay: 0.1
-#  - sequence:
-#    - condition: state
-#      entity_id: person.jiri_furda
-#      state: 'home'
-#    - service: script.meter_two   
-
-
 lights_partying_on:
-  alias: 'Lights partying on'
+  alias: Lights partying on
   sequence:
-    - service: scene.create
-      data:
-        scene_id: studioprimaparty
-        snapshot_entities:
-        - light.living_room_lamp_light
-        entity_id: script.lights_partying
-
+  - service: scene.create
+    data:
+      scene_id: studioprimaparty
+      snapshot_entities:
+      - light.living_room_lamp_light
+      entity_id: script.lights_partying
 lights_party:
   sequence:
-    - repeat:
-        while:
-          - condition: state
-            entity_id: input_boolean.party
-            state: 'on'
-        sequence:
-          - service: light.turn_on
-            data_template:
-              entity_id: light.living_room_lamp_light
-              rgb_color: [255, 0, 0]
-              brightness: 255
-          - delay: 0.35
-          - service: light.turn_on
-            data_template:
-              entity_id: light.living_room_lamp_light
-              rgb_color: [255, 255, 0]
-              brightness: 255
-          - delay: 0.35
-          - service: light.turn_on
-            data_template:
-              entity_id: light.living_room_lamp_light
-              rgb_color: [0, 255, 0]
-              brightness: 255
-          - delay: 0.35
-          - service: light.turn_on
-            data_template:
-              entity_id: light.living_room_lamp_light
-              rgb_color: [0, 255, 255]
-              brightness: 255
-          - delay: 0.35
-          - service: light.turn_on
-            data_template:
-              entity_id: light.living_room_lamp_light
-              rgb_color: [0, 0, 255]
-              brightness: 255
-          - delay: 0.35
-          - service: light.turn_on
-            data_template:
-              entity_id: light.living_room_lamp_light
-              rgb_color: [255, 0, 255]
-              brightness: 255
-          - delay: 0.35
+  - repeat:
+      while:
+      - condition: state
+        entity_id: input_boolean.party
+        state: 'on'
+      sequence:
+      - service: light.turn_on
+        data_template:
+          entity_id: light.living_room_lamp_light
+          rgb_color:
+          - 255
+          - 0
+          - 0
+          brightness: 255
+      - delay: 0.35
+      - service: light.turn_on
+        data_template:
+          entity_id: light.living_room_lamp_light
+          rgb_color:
+          - 255
+          - 255
+          - 0
+          brightness: 255
+      - delay: 0.35
+      - service: light.turn_on
+        data_template:
+          entity_id: light.living_room_lamp_light
+          rgb_color:
+          - 0
+          - 255
+          - 0
+          brightness: 255
+      - delay: 0.35
+      - service: light.turn_on
+        data_template:
+          entity_id: light.living_room_lamp_light
+          rgb_color:
+          - 0
+          - 255
+          - 255
+          brightness: 255
+      - delay: 0.35
+      - service: light.turn_on
+        data_template:
+          entity_id: light.living_room_lamp_light
+          rgb_color:
+          - 0
+          - 0
+          - 255
+          brightness: 255
+      - delay: 0.35
+      - service: light.turn_on
+        data_template:
+          entity_id: light.living_room_lamp_light
+          rgb_color:
+          - 255
+          - 0
+          - 255
+          brightness: 255
+      - delay: 0.35

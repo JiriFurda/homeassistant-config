@@ -102,20 +102,22 @@
                                         {
                                             "type": "button",
                                             "tap_action": {
-                                                "action": "toggle"
+                                                "action": "volume_up"
                                             },
-                                            "entity": "script.tv_volume_up",
+                                            "entity": "media_player.setobox",
                                             "show_name": true,
-                                            "name": "Vol +"
+                                            "name": "Vol +",
+                                            "icon": "mdi:volume-plus"
                                         },
                                         {
                                             "type": "button",
                                             "tap_action": {
-                                                "action": "toggle"
+                                                "action": "volume_down"
                                             },
-                                            "entity": "script.tv_volume_down",
+                                            "entity": "media_player.setobox",
                                             "show_name": true,
-                                            "name": "Vol -"
+                                            "name": "Vol -",
+                                            "icon": "mdi:volume-minus"
                                         },
                                         {
                                             "type": "button",
@@ -143,11 +145,12 @@
                                         {
                                             "type": "button",
                                             "tap_action": {
-                                                "action": "toggle"
+                                                "action": "volume_mute"
                                             },
-                                            "entity": "script.tv_mute",
+                                            "entity": "media_player.setobox",
                                             "show_name": true,
-                                            "name": "Mute"
+                                            "name": "Mute",
+                                            "icon": "mdi:volume-off"
                                         },
                                         {
                                             "type": "button",

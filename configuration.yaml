@@ -6,17 +6,17 @@ tts:
   - platform: google_translate
     language: 'cs'
 
-group: !include groups.yaml
-automation: !include automations.yaml
+group: !include includes/groups.yaml
+automation: !include includes/automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
-sensor: !include sensors.yaml
-input_boolean: !include input_booleans.yaml
-timer: !include timers.yaml
-binary_sensor: !include binary_sensors.yaml
-media_player: !include media_players.yaml
-light: !include lights.yaml
-input_select: !include input_selects.yaml
+sensor: !include includes/sensors.yaml
+input_boolean: !include includes/input_booleans.yaml
+timer: !include includes/timers.yaml
+binary_sensor: !include includes/binary_sensors.yaml
+media_player: !include includes/media_players.yaml
+light: !include includes/lights.yaml
+input_select: !include includes/input_selects.yaml
 
 google_assistant:
   project_id: home-assistant-new-5b1c8
