@@ -16,6 +16,10 @@
   dnd:
     name: Mód nerušit
     initial: off
+  guest_presence:
+    name: Host
+    icon: "mdi:account-plus"
+    initial: off
 
 # Other
   zigbee_permit_join:
@@ -25,4 +29,8 @@
   party:
     name: Party Lights
     icon: mdi:music-note
+    initial: off
+    
+# NodeRed shortcuts
+  vacuum_living_room:
     initial: off

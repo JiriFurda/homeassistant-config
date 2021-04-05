@@ -18,6 +18,16 @@ setobox_channel_up:
       command: Channel up
   mode: single
   icon: mdi:chevron-up
+setobox_channel_down:
+  alias: Setobox Channel Down
+  sequence:
+  - service: remote.send_command
+    data:
+      entity_id: remote.broadlink_rm4_pro_remote
+      device: setobox
+      command: Channel down
+  mode: single
+  icon: mdi:chevron-down
 setobox_epg:
   alias: Setobox EPG
   sequence:
@@ -165,3 +175,120 @@ lights_party:
           - 255
           brightness: 255
       - delay: 0.35
+
+# Vacuum
+vacuum_living_room_with_carpet:
+  alias: "Obývák"
+  icon: "mdi:sofa"
+  sequence:
+  - service: vacuum.xiaomi_clean_zone
+    data:
+      entity_id: vacuum.xiaomi_mop_p
+      zone: [[-0.2, -3.7, 2.5, 3.4]]
+      repeats: 1
+  mode: single
+vacuum_living_room_no_kitchen:
+  icon: "mdi:sofa"
+  sequence:
+  - service: vacuum.xiaomi_clean_zone
+    data:
+      entity_id: vacuum.xiaomi_mop_p
+      zone: [[-0.2, 1.3, 2.5, 3.4]]
+      repeats: 1
+  mode: single
+vacuum_living_room_only_carpet:
+  icon: "mdi:sofa"
+  sequence:
+  - service: vacuum.xiaomi_clean_zone
+    data:
+      entity_id: vacuum.xiaomi_mop_p
+      zone: [[0.6, 0.4, 1.6, 2]]
+      repeats: 1
+  mode: single
+vacuum_living_room_no_carpet:
+  icon: "mdi:sofa"
+  sequence:
+  - service: vacuum.xiaomi_clean_zone
+    data:
+      entity_id: vacuum.xiaomi_mop_p
+      zone: [[-0.2, 0.4, 0.6, 3.4], [-0.2, -3.7, 2.5, 0.4]]
+      repeats: 1
+  mode: single
+vacuum_kitchen:
+  alias: "Kuchyň"
+  icon: "mdi:silverware-fork-knife"
+  sequence:
+  - service: vacuum.xiaomi_clean_zone
+    data:
+      entity_id: vacuum.xiaomi_mop_p
+      zone: [[-0.3, -3.6, 2.5, -1.3]]
+      repeats: 1
+  mode: single
+vacuum_bedroom:
+  alias: "Ložnice"
+  icon: "mdi:bed"
+  sequence:
+  - service: vacuum.xiaomi_clean_zone
+    data:
+      entity_id: vacuum.xiaomi_mop_p
+      zone: [[-3.2, -1.3, -0.3, 1.8], [-3.2, -2.75, -1.4, -1.3]]
+      repeats: 1
+  mode: single
+vacuum_hall:
+  alias: "Chodba"
+  sequence:
+  - service: vacuum.xiaomi_clean_zone
+    data:
+      entity_id: vacuum.xiaomi_mop_p
+      zone: [[-1.4, -6.8, 0, -1.3]]
+      repeats: 1
+  mode: single
+vacuum_toilet:
+  alias: "Záchod"
+  icon: "mdi:toilet"
+  sequence:
+  - service: vacuum.xiaomi_clean_zone
+    data:
+      entity_id: vacuum.xiaomi_mop_p
+      zone: [[-3, -6.5, -1.4, -5.6]]
+      repeats: 1
+  mode: single
+vacuum_bathroom:
+  alias: "Koupelna"
+  icon: "mdi:shower"
+  sequence:
+  - service: vacuum.xiaomi_clean_zone
+    data:
+      entity_id: vacuum.xiaomi_mop_p
+      zone: [[-2.6, -5.5, -1.4, -3.7]]
+      repeats: 1
+  mode: single
+vacuum_pantry:
+  alias: "Špajz"
+  icon: "mdi:warehouse"
+  sequence:
+  - service: vacuum.xiaomi_clean_zone
+    data:
+      entity_id: vacuum.xiaomi_mop_p
+      zone: [[0, -6.1, 2, -4.5]]
+      repeats: 1
+  mode: single
+vacuum_cat:
+  alias: "Kočka"
+  icon: "mdi:cat"
+  sequence:
+  - service: vacuum.xiaomi_clean_zone
+    data:
+      entity_id: vacuum.xiaomi_mop_p
+      zone: [[-1.4, -5.1, 0, -3.6]]
+      repeats: 1
+  mode: single
+  
+# NodeRed shortcuts
+vacuum_living_room:
+  alias: "Obývák"
+  icon: "mdi:sofa"
+  sequence:
+    - service: input_boolean.turn_on
+      data:
+        entity_id: input_boolean.vacuum_living_room

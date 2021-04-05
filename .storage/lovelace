@@ -194,6 +194,184 @@
                     ]
                 },
                 {
+                    "title": "Byt",
+                    "path": "byt",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "custom:vacuum-card",
+                            "entity": "vacuum.xiaomi_mop_p",
+                            "image": "default"
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "script.vacuum_living_room"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "script.vacuum_kitchen"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "script.vacuum_bedroom"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "script.vacuum_hall"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "script.vacuum_cat"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "script.vacuum_pantry"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "script.vacuum_bathroom"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "script.vacuum_toilet"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "custom:xiaomi-vacuum-map-card",
+                            "entity": "vacuum.xiaomi_mop_p",
+                            "map_image": "/local/images/vacuum_map_real.png",
+                            "calibration_points": [
+                                {
+                                    "vacuum": {
+                                        "x": -3.2,
+                                        "y": 3.4
+                                    },
+                                    "map": {
+                                        "x": 100,
+                                        "y": 300
+                                    }
+                                },
+                                {
+                                    "vacuum": {
+                                        "x": 2.5,
+                                        "y": 3.4
+                                    },
+                                    "map": {
+                                        "x": 1000,
+                                        "y": 300
+                                    }
+                                },
+                                {
+                                    "vacuum": {
+                                        "x": -3.2,
+                                        "y": -6.8
+                                    },
+                                    "map": {
+                                        "x": 100,
+                                        "y": 1760
+                                    }
+                                }
+                            ],
+                            "zones": [
+                                [
+                                    [
+                                        -0.2,
+                                        -1.3,
+                                        2.5,
+                                        3.4
+                                    ]
+                                ],
+                                [
+                                    [
+                                        -0.3,
+                                        -3.6,
+                                        2.5,
+                                        -1.3
+                                    ]
+                                ],
+                                [
+                                    [
+                                        -3.2,
+                                        -2.8,
+                                        -0.3,
+                                        1.8
+                                    ]
+                                ],
+                                [
+                                    [
+                                        -1.4,
+                                        -6.8,
+                                        0,
+                                        -1.3
+                                    ]
+                                ],
+                                [
+                                    [
+                                        -3,
+                                        -6.5,
+                                        -1.4,
+                                        -5.6
+                                    ]
+                                ],
+                                [
+                                    [
+                                        -2.6,
+                                        -5.5,
+                                        -1.4,
+                                        -3.7
+                                    ]
+                                ],
+                                [
+                                    [
+                                        0,
+                                        -6.1,
+                                        2,
+                                        -4.5
+                                    ]
+                                ]
+                            ]
+                        }
+                    ]
+                },
+                {
                     "title": "Koupelna",
                     "path": "koupelna",
                     "badges": [],
@@ -263,6 +441,11 @@
                 {
                     "path": "",
                     "title": "Pokro\u010dil\u00e9 nastaven\u00ed",
+                    "visible": [
+                        {
+                            "user": "942bdab7a5d9420da79a07e67384448f"
+                        }
+                    ],
                     "badges": [],
                     "cards": [
                         {
@@ -287,6 +470,299 @@
                             "hours_to_show": 24,
                             "refresh_interval": 0,
                             "type": "history-graph"
+                        }
+                    ]
+                },
+                {
+                    "title": "Vysava\u010d - Pokro\u010dil\u00e9",
+                    "path": "vysavac---pokrocile",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "custom:xiaomi-vacuum-map-card",
+                            "entity": "vacuum.xiaomi_mop_p",
+                            "map_image": "/local/images/vacuum_map_real.png",
+                            "calibration_points": [
+                                {
+                                    "vacuum": {
+                                        "x": -3.2,
+                                        "y": 3.4
+                                    },
+                                    "map": {
+                                        "x": 100,
+                                        "y": 300
+                                    }
+                                },
+                                {
+                                    "vacuum": {
+                                        "x": 2.5,
+                                        "y": 3.4
+                                    },
+                                    "map": {
+                                        "x": 1000,
+                                        "y": 300
+                                    }
+                                },
+                                {
+                                    "vacuum": {
+                                        "x": -3.2,
+                                        "y": -6.8
+                                    },
+                                    "map": {
+                                        "x": 100,
+                                        "y": 1760
+                                    }
+                                }
+                            ],
+                            "zones": [
+                                [
+                                    [
+                                        -0.2,
+                                        -1.3,
+                                        2.5,
+                                        3.4
+                                    ]
+                                ],
+                                [
+                                    [
+                                        -0.3,
+                                        -3.6,
+                                        2.5,
+                                        -1.3
+                                    ]
+                                ],
+                                [
+                                    [
+                                        -3.2,
+                                        -2.8,
+                                        -0.3,
+                                        1.8
+                                    ]
+                                ],
+                                [
+                                    [
+                                        -1.4,
+                                        -6.8,
+                                        0,
+                                        -1.3
+                                    ]
+                                ],
+                                [
+                                    [
+                                        -3,
+                                        -6.5,
+                                        -1.4,
+                                        -5.6
+                                    ]
+                                ],
+                                [
+                                    [
+                                        -2.6,
+                                        -5.5,
+                                        -1.4,
+                                        -3.7
+                                    ]
+                                ],
+                                [
+                                    [
+                                        0,
+                                        -6.1,
+                                        2,
+                                        -4.5
+                                    ]
+                                ]
+                            ]
+                        },
+                        {
+                            "type": "custom:xiaomi-vacuum-map-card",
+                            "entity": "vacuum.xiaomi_mop_p",
+                            "map_image": "/local/images/vacuum_map.png",
+                            "calibration_points": [
+                                {
+                                    "vacuum": {
+                                        "x": -3.2,
+                                        "y": 3.4
+                                    },
+                                    "map": {
+                                        "x": 0,
+                                        "y": 0
+                                    }
+                                },
+                                {
+                                    "vacuum": {
+                                        "x": 2.5,
+                                        "y": 3.4
+                                    },
+                                    "map": {
+                                        "x": 750,
+                                        "y": 0
+                                    }
+                                },
+                                {
+                                    "vacuum": {
+                                        "x": -3.2,
+                                        "y": -6.8
+                                    },
+                                    "map": {
+                                        "x": 0,
+                                        "y": 1330
+                                    }
+                                }
+                            ],
+                            "zones": [
+                                [
+                                    [
+                                        -0.2,
+                                        -1.3,
+                                        2.5,
+                                        3.4
+                                    ]
+                                ],
+                                [
+                                    [
+                                        -0.3,
+                                        -3.6,
+                                        2.5,
+                                        -1.3
+                                    ]
+                                ],
+                                [
+                                    [
+                                        -3.2,
+                                        -2.8,
+                                        -0.3,
+                                        1.8
+                                    ]
+                                ],
+                                [
+                                    [
+                                        -1.4,
+                                        -6.8,
+                                        0,
+                                        -1.3
+                                    ]
+                                ],
+                                [
+                                    [
+                                        -3,
+                                        -6.5,
+                                        -1.4,
+                                        -5.6
+                                    ]
+                                ],
+                                [
+                                    [
+                                        -2.6,
+                                        -5.5,
+                                        -1.4,
+                                        -3.7
+                                    ]
+                                ],
+                                [
+                                    [
+                                        0,
+                                        -6.1,
+                                        2,
+                                        -4.5
+                                    ]
+                                ]
+                            ]
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.someone_home"
+                                },
+                                {
+                                    "entity": "person.jiri_furda",
+                                    "icon": "mdi:face"
+                                },
+                                {
+                                    "entity": "person.vendula_cincurova",
+                                    "icon": "mdi:face-woman-outline"
+                                },
+                                {
+                                    "entity": "input_boolean.guest_presence"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "custom:vacuum-card",
+                            "entity": "vacuum.xiaomi_mop_p",
+                            "image": "default",
+                            "compact_view": false
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "script.vacuum_living_room"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "script.vacuum_kitchen"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "script.vacuum_bedroom"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "script.vacuum_hall"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "script.vacuum_cat"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "script.vacuum_pantry"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "script.vacuum_bathroom"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "script.vacuum_toilet"
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 }

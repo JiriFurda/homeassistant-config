@@ -7,7 +7,7 @@ tts:
     language: 'cs'
 
 group: !include includes/groups.yaml
-automation: !include includes/automations.yaml
+automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
 sensor: !include includes/sensors.yaml
@@ -29,7 +29,18 @@ browser_mod:
 
 device_tracker:
   - platform: bluetooth_tracker
+    new_device_defaults:
+      track_new_devices: false
+  - platform: ping
+    hosts:
+      nokia_6_2_wifi: 192.168.0.103
   
 spotify:
   client_id: b5e9102ce29943bba9940ab3fa48a814
   client_secret: !secret spotify_secret
+  
+vacuum:
+  - platform: miio2
+    host: 192.168.0.203
+    token: !secret xiaomi_vacuum_token
+    name: Xiaomi Mop P
