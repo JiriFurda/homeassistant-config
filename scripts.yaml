@@ -236,6 +236,7 @@ vacuum_bedroom:
   mode: single
 vacuum_hall:
   alias: "Chodba"
+  icon: "mdi:road"
   sequence:
   - service: vacuum.xiaomi_clean_zone
     data:

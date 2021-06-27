@@ -372,6 +372,17 @@
                     ]
                 },
                 {
+                    "title": "Kuchyn\u011b",
+                    "path": "kuchyne",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "light",
+                            "entity": "light.kitchen_light"
+                        }
+                    ]
+                },
+                {
                     "title": "Koupelna",
                     "path": "koupelna",
                     "badges": [],
@@ -470,12 +481,24 @@
                             "hours_to_show": 24,
                             "refresh_interval": 0,
                             "type": "history-graph"
+                        },
+                        {
+                            "type": "button",
+                            "tap_action": {
+                                "action": "toggle"
+                            },
+                            "entity": "input_boolean.party"
                         }
                     ]
                 },
                 {
                     "title": "Vysava\u010d - Pokro\u010dil\u00e9",
                     "path": "vysavac---pokrocile",
+                    "visible": [
+                        {
+                            "user": "942bdab7a5d9420da79a07e67384448f"
+                        }
+                    ],
                     "badges": [],
                     "cards": [
                         {
@@ -759,6 +782,74 @@
                                                 "action": "toggle"
                                             },
                                             "entity": "script.vacuum_toilet"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "markdown",
+                                    "content": "V\u00fdb\u011br pokoj\u016f"
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "input_boolean.vacuum_living_room"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "input_boolean.vacuum_kitchen"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "input_boolean.vacuum_hall"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "input_boolean.vacuum_bedroom"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "input_boolean.vacuum_pantry"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "input_boolean.vacuum_bathroom"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "input_boolean.vacuum_toilet"
                                         }
                                     ]
                                 }

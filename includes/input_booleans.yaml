@@ -32,5 +32,21 @@
     initial: off
     
 # NodeRed shortcuts
+  nodered_vacuum_living_room:
+    initial: off
+    
+# Vacuum rooms
   vacuum_living_room:
+    initial: off
+  vacuum_kitchen:
+    initial: off
+  vacuum_bedroom:
+    initial: off
+  vacuum_hall:
+    initial: off
+  vacuum_pantry:
+    initial: off
+  vacuum_toilet:
+    initial: off
+  vacuum_bathroom:
     initial: off

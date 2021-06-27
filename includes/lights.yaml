@@ -2,3 +2,4 @@
     name: Kitchen Light
     entities:
       - light.kitchen_light_1_light
+      - light.kitchen_light_2_light
