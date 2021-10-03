@@ -17,6 +17,7 @@ binary_sensor: !include includes/binary_sensors.yaml
 media_player: !include includes/media_players.yaml
 light: !include includes/lights.yaml
 input_select: !include includes/input_selects.yaml
+camera: !include includes/cameras.yaml
 
 google_assistant:
   project_id: home-assistant-new-5b1c8

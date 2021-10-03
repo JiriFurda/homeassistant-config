@@ -11,11 +11,11 @@
                         {
                             "cards": [
                                 {
-                                    "entity": "light.living_room_light_light",
                                     "type": "light",
                                     "hold_action": {
                                         "action": "more-info"
-                                    }
+                                    },
+                                    "entity": "light.living_room_light"
                                 },
                                 {
                                     "type": "vertical-stack",
@@ -30,12 +30,6 @@
                                                     "entity": "scene.tv_time"
                                                 },
                                                 {
-                                                    "entity": "scene.tv"
-                                                },
-                                                {
-                                                    "entity": "scene.christmas"
-                                                },
-                                                {
                                                     "entity": "input_boolean.party"
                                                 }
                                             ],
@@ -45,10 +39,6 @@
                                 }
                             ],
                             "type": "vertical-stack"
-                        },
-                        {
-                            "entity": "light.living_room_lamp_light",
-                            "type": "light"
                         },
                         {
                             "type": "vertical-stack",
@@ -190,6 +180,51 @@
                         {
                             "entity": "media_player.living_room_speaker",
                             "type": "media-control"
+                        }
+                    ]
+                },
+                {
+                    "title": "Lo\u017enice",
+                    "path": "loznice",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "light",
+                                    "entity": "light.bedrom_light"
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "scene.bedroom_maximum"
+                                        },
+                                        {
+                                            "entity": "scene.bedroom_minimum"
+                                        },
+                                        {
+                                            "entity": "scene.sexy_time"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "horizontal-stack",
+                            "cards": [
+                                {
+                                    "type": "light",
+                                    "entity": "light.bedroom_light_cct_light",
+                                    "name": "B\u00edl\u00e1 \u017e\u00e1rovka"
+                                },
+                                {
+                                    "type": "light",
+                                    "entity": "light.bedroom_light_rgb_light",
+                                    "name": "Barevn\u00e1 \u017e\u00e1rovka"
+                                }
+                            ]
                         }
                     ]
                 },
@@ -372,32 +407,6 @@
                     ]
                 },
                 {
-                    "title": "Kuchyn\u011b",
-                    "path": "kuchyne",
-                    "badges": [],
-                    "cards": [
-                        {
-                            "type": "light",
-                            "entity": "light.kitchen_light"
-                        }
-                    ]
-                },
-                {
-                    "title": "Koupelna",
-                    "path": "koupelna",
-                    "badges": [],
-                    "cards": [
-                        {
-                            "type": "entity",
-                            "entity": "input_select.washing_machine_status"
-                        },
-                        {
-                            "type": "entity",
-                            "entity": "timer.washing_machine"
-                        }
-                    ]
-                },
-                {
                     "title": "Nastaven\u00ed",
                     "path": "nastaveni",
                     "badges": [],
@@ -425,6 +434,9 @@
                             "type": "entities",
                             "entities": [
                                 {
+                                    "entity": "input_boolean.automation_tv_meter"
+                                },
+                                {
                                     "entity": "input_boolean.automation_plex_pause_light"
                                 },
                                 {
@@ -446,6 +458,18 @@
                                 }
                             ],
                             "title": "Dal\u0161\u00ed"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "input_boolean.automation_vacuum_start"
+                                },
+                                {
+                                    "entity": "input_boolean.automation_vacuum_mode"
+                                }
+                            ],
+                            "title": "Vysava\u010d"
                         }
                     ]
                 },
@@ -488,6 +512,11 @@
                                 "action": "toggle"
                             },
                             "entity": "input_boolean.party"
+                        },
+                        {
+                            "type": "markdown",
+                            "content": "\n[E.ON (elekt\u0159ina)](https://login.eon.cz/prihlaseni/e24)  \n[Yello (plyn)](https://moje.yello.cz/cs/me-yello/dashboard/)\n[Google Drive (Dokumenty)](https://drive.google.com/drive/folders/1P-nsaT41_t7cdgOQ46Bartkz5tSydyw9?usp=sharing)",
+                            "title": "Odkazy"
                         }
                     ]
                 },
@@ -852,6 +881,43 @@
                                             "entity": "input_boolean.vacuum_toilet"
                                         }
                                     ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "custom:xiaomi-vacuum-map-card",
+                            "entity": "vacuum.xiaomi_mop_p",
+                            "map_camera": "camera.xiaomi_cloud_map_extractor",
+                            "calibration_points": [
+                                {
+                                    "vacuum": {
+                                        "x": -3.2,
+                                        "y": 3.4
+                                    },
+                                    "map": {
+                                        "x": 100,
+                                        "y": 300
+                                    }
+                                },
+                                {
+                                    "vacuum": {
+                                        "x": 2.5,
+                                        "y": 3.4
+                                    },
+                                    "map": {
+                                        "x": 1000,
+                                        "y": 300
+                                    }
+                                },
+                                {
+                                    "vacuum": {
+                                        "x": -3.2,
+                                        "y": -6.8
+                                    },
+                                    "map": {
+                                        "x": 100,
+                                        "y": 1760
+                                    }
                                 }
                             ]
                         }

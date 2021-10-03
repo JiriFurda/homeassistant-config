@@ -4,13 +4,23 @@
     initial: off
   automation_plex_pause_light:
     name: Rozsvícení světla při stopnutí přehrávání Plex
-    initial: on
+    initial: off
   automation_washing_machine:
     name: Oznámení dokončení cyklu pračky
-    initial: on
+    initial: off
   automation_dnd:
     name: Automatické zapnutí/vypnutí módu nerušit
     initial: on
+  automation_tv_meter:
+    name: Přihlášení do TV meteru
+    initial: on
+  automation_vacuum_start:
+    name: Automatické spuštění vysavače
+    initial: on
+  automation_vacuum_mode:
+    name: Režim vysavače podle přítomnosti osob
+    initial: on
+
 
 # Variables
   dnd:

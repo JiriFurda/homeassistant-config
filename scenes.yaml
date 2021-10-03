@@ -1,7 +1,7 @@
 - id: '1591991243529'
   name: Maximum
   entities:
-    light.living_room_light_light:
+    light.living_room_light_1_light:
       min_mireds: 153
       max_mireds: 500
       effect_list:
@@ -12,71 +12,32 @@
       - finish_effect
       - stop_effect
       brightness: 254
-      color_temp: 153
-      linkquality: 99
+      color_temp: 332
+      linkquality: 57
       state: 'on'
-      update:
-        state: available
-      update_available: true
-      friendly_name: Main Light
+      friendly_name: living_room_light_1_light
+      supported_features: 47
+    light.living_room_light_2_light:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      brightness: 254
+      color_temp: 332
+      linkquality: 78
+      state: 'on'
+      friendly_name: Living Room Light 2
       supported_features: 47
   icon: mdi:brightness-7
 - id: '1591991295351'
   name: Minimum
   entities:
-    light.living_room_light_light:
-      min_mireds: 153
-      max_mireds: 500
-      effect_list:
-      - blink
-      - breathe
-      - okay
-      - channel_change
-      - finish_effect
-      - stop_effect
-      brightness: 5
-      color_temp: 500
-      linkquality: 55
-      state: 'on'
-      update:
-        state: available
-      update_available: true
-      friendly_name: Main Light
-      supported_features: 47
-  icon: mdi:brightness-5
-- id: '1604180881474'
-  name: TV Mode
-  entities:
-    light.living_room_lamp_light:
-      min_mireds: 153
-      max_mireds: 500
-      effect_list:
-      - blink
-      - breathe
-      - okay
-      - channel_change
-      - finish_effect
-      - stop_effect
-      brightness: 170
-      color_temp: 378
-      hs_color:
-      - 36.226
-      - 62.353
-      rgb_color:
-      - 255
-      - 191
-      - 95
-      xy_color:
-      - 0.492
-      - 0.411
-      color:
-        x: 0.491
-        y: 0.412
-      linkquality: 89
-      state: 'on'
-      friendly_name: Lamp
-      supported_features: 63
-    light.living_room_light_light:
+    light.living_room_light_1_light:
       min_mireds: 153
       max_mireds: 500
       effect_list:
@@ -88,18 +49,31 @@
       - stop_effect
       brightness: 3
       color_temp: 500
-      linkquality: 105
-      state: 'off'
-      update:
-        state: available
-      update_available: true
-      friendly_name: Main Light
+      linkquality: 63
+      state: 'on'
+      friendly_name: living_room_light_1_light
       supported_features: 47
-  icon: mdi:television
-- id: '1606680339871'
-  name: Christmas
+    light.living_room_light_2_light:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      brightness: 3
+      color_temp: 500
+      linkquality: 76
+      state: 'on'
+      friendly_name: Living Room Light 2
+      supported_features: 47
+  icon: mdi:brightness-5
+- id: '1632164707552'
+  name: Sexy Time
   entities:
-    light.living_room_lamp_light:
+    light.bedroom_light_cct_light:
       min_mireds: 153
       max_mireds: 500
       effect_list:
@@ -110,25 +84,15 @@
       - finish_effect
       - stop_effect
       brightness: 254
-      color_temp: 37
-      hs_color:
-      - 0
-      - 100
-      rgb_color:
-      - 255
-      - 0
-      - 0
-      xy_color:
-      - 0.701
-      - 0.299
-      color:
-        x: 0.701
-        y: 0.299
-      linkquality: 70
-      state: 'on'
-      friendly_name: Lamp
-      supported_features: 63
-    light.living_room_light_light:
+      color_temp: 294
+      linkquality: 39
+      state: 'off'
+      update:
+        state: available
+      update_available: true
+      friendly_name: bedroom_light_cct_light
+      supported_features: 47
+    light.bedroom_light_rgb_light:
       min_mireds: 153
       max_mireds: 500
       effect_list:
@@ -138,13 +102,114 @@
       - channel_change
       - finish_effect
       - stop_effect
-      brightness: 251
-      color_temp: 153
-      linkquality: 94
-      state: 'off'
+      brightness: 254
+      color_temp: 44
+      hs_color:
+      - 299.754
+      - 95.686
+      rgb_color:
+      - 253
+      - 11
+      - 255
+      xy_color:
+      - 0.383
+      - 0.154
+      color:
+        x: 0.385
+        y: 0.155
+      linkquality: 65
+      state: 'on'
+      friendly_name: bedroom_light_rgb_light
+      supported_features: 63
+- id: '1632164748606'
+  name: Bedroom Maximum
+  entities:
+    light.bedroom_light_cct_light:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      brightness: 254
+      color_temp: 308
+      linkquality: 52
+      state: 'on'
       update:
         state: available
       update_available: true
-      friendly_name: Main Light
+      friendly_name: bedroom_light_cct_light
       supported_features: 47
-  icon: mdi:pine-tree
+    light.bedroom_light_rgb_light:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      brightness: 253
+      color_temp: 324
+      hs_color:
+      - 39.823
+      - 44.314
+      rgb_color:
+      - 255
+      - 216
+      - 141
+      xy_color:
+      - 0.432
+      - 0.402
+      color:
+        x: 0.431344681687312
+        y: 0.402077494772728
+      linkquality: 65
+      state: 'on'
+      friendly_name: bedroom_light_rgb_light
+      supported_features: 63
+- id: '1633207137096'
+  name: Bedroom Minimum
+  entities:
+    light.bedroom_light_cct_light:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      brightness: 3
+      color_temp: 500
+      linkquality: 81
+      state: 'on'
+      update:
+        state: available
+      update_available: true
+      friendly_name: bedroom_light_cct_light
+      supported_features: 47
+    light.bedroom_light_rgb_light:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      brightness: 254
+      color:
+        x: 0.421432843853882
+        y: 0.39814977812183
+      color_temp: 309
+      linkquality: 78
+      state: 'off'
+      friendly_name: bedroom_light_rgb_light
+      supported_features: 63

@@ -1,5 +1,10 @@
   - platform: group
-    name: Kitchen Light
+    name: Living Room Light
     entities:
-      - light.kitchen_light_1_light
-      - light.kitchen_light_2_light
+      - light.living_room_light_1
+      - light.living_room_light_2
+  - platform: group
+    name: Bedroom Light
+    entities:
+      - light.bedroom_light_cct_light
+      - light.bedroom_light_rgb_light
