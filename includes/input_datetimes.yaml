@@ -1,0 +1,24 @@
+  heating_living_room_workday_morning_start:
+    name: Začátek topení v obýváku ráno v týdnu
+    has_date: false
+    has_time: true
+  heating_living_room_workday_morning_end:
+    name: Konec topení v obýváku ráno v týdnu
+    has_date: false
+    has_time: true
+  heating_living_room_workday_evening_start:
+    name: Začátek topení v obýváku večer v týdnu
+    has_date: false
+    has_time: true
+  heating_living_room_workday_evening_end:
+    name: Konec topení v obýváku večer v týdnu
+    has_date: false
+    has_time: true
+  heating_living_room_weekend_start:
+    name: Začátek topení v obýváku o víkendu
+    has_date: false
+    has_time: true
+  heating_living_room_weekend_end:
+    name: Konec topení v obýváku o víkendu
+    has_date: false
+    has_time: true

@@ -10,6 +10,7 @@ group: !include includes/groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
+switch: !include includes/switches.yaml
 sensor: !include includes/sensors.yaml
 input_boolean: !include includes/input_booleans.yaml
 timer: !include includes/timers.yaml
@@ -18,6 +19,7 @@ media_player: !include includes/media_players.yaml
 light: !include includes/lights.yaml
 input_select: !include includes/input_selects.yaml
 camera: !include includes/cameras.yaml
+input_datetime: !include includes/input_datetimes.yaml
 
 google_assistant:
   project_id: home-assistant-new-5b1c8
@@ -25,6 +27,7 @@ google_assistant:
   report_state: true
   
 smartir:
+  check_updates: false
     
 browser_mod:
 

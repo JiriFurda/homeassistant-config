@@ -1,10 +1,12 @@
   - platform: group
     name: Living Room Light
+    unique_id: living_room_light
     entities:
       - light.living_room_light_1
       - light.living_room_light_2
   - platform: group
     name: Bedroom Light
+    unique_id: bedroom_light
     entities:
-      - light.bedroom_light_cct_light
-      - light.bedroom_light_rgb_light
+      - light.bedroom_light_cct
+      - light.bedroom_light_rgb

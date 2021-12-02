@@ -17,3 +17,7 @@ known_devices.yaml
 www/images/vacuum_map.png
 
 www/images/vacuum_map_real.png
+
+H2UJ48~R
+home-assistant_v2.db-*
+home-assistant.log.*

@@ -1,35 +1,28 @@
 # Automation switches
   automation_ps4_light:
     name: Ztlumení světla při zapnutí Play Station
-    initial: off
   automation_plex_pause_light:
     name: Rozsvícení světla při stopnutí přehrávání Plex
-    initial: off
   automation_washing_machine:
     name: Oznámení dokončení cyklu pračky
-    initial: off
   automation_dnd:
     name: Automatické zapnutí/vypnutí módu nerušit
-    initial: on
   automation_tv_meter:
     name: Přihlášení do TV meteru
-    initial: on
   automation_vacuum_start:
     name: Automatické spuštění vysavače
-    initial: on
   automation_vacuum_mode:
     name: Režim vysavače podle přítomnosti osob
-    initial: on
+  automation_tv_power_on_off:
+    name: Automatické zapnutí/vypnutí televize podle PS4
 
 
 # Variables
   dnd:
     name: Mód nerušit
-    initial: off
   guest_presence:
     name: Host
     icon: "mdi:account-plus"
-    initial: off
 
 # Other
   zigbee_permit_join:
@@ -39,7 +32,9 @@
   party:
     name: Party Lights
     icon: mdi:music-note
-    initial: off
+  tricolor:
+    name: Trikolóra
+    icon: mdi:flag-outline-variant
     
 # NodeRed shortcuts
   nodered_vacuum_living_room:
@@ -60,3 +55,11 @@
     initial: off
   vacuum_bathroom:
     initial: off
+    
+# Heating
+  heating_living_room_workday_morning:
+    name: Topení obývák ráno (prac. den)
+  heating_living_room_workday_evening:
+    name: Topení obývák večer (prac. den)
+  heating_living_room_weekend:
+    name: Topení obývák (víkend)

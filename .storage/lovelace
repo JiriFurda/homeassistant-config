@@ -41,6 +41,10 @@
                             "type": "vertical-stack"
                         },
                         {
+                            "type": "thermostat",
+                            "entity": "climate.living_room_radiator"
+                        },
+                        {
                             "type": "vertical-stack",
                             "cards": [
                                 {
@@ -193,7 +197,7 @@
                             "cards": [
                                 {
                                     "type": "light",
-                                    "entity": "light.bedrom_light"
+                                    "entity": "light.bedroom_light"
                                 },
                                 {
                                     "type": "entities",
@@ -206,6 +210,9 @@
                                         },
                                         {
                                             "entity": "scene.sexy_time"
+                                        },
+                                        {
+                                            "entity": "input_boolean.tricolor"
                                         }
                                     ]
                                 }
@@ -216,15 +223,82 @@
                             "cards": [
                                 {
                                     "type": "light",
-                                    "entity": "light.bedroom_light_cct_light",
+                                    "entity": "light.bedroom_light_cct",
                                     "name": "B\u00edl\u00e1 \u017e\u00e1rovka"
                                 },
                                 {
                                     "type": "light",
-                                    "entity": "light.bedroom_light_rgb_light",
+                                    "entity": "light.bedroom_light_rgb",
                                     "name": "Barevn\u00e1 \u017e\u00e1rovka"
                                 }
                             ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Topen\u00ed",
+                    "path": "topeni",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "input_boolean.heating_living_room_workday_morning"
+                                },
+                                {
+                                    "entity": "input_boolean.heating_living_room_workday_evening"
+                                },
+                                {
+                                    "entity": "input_boolean.heating_living_room_weekend"
+                                }
+                            ],
+                            "state_color": false,
+                            "show_header_toggle": true,
+                            "title": "Topen\u00ed"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "input_datetime.heating_living_room_workday_morning_start"
+                                },
+                                {
+                                    "entity": "input_datetime.heating_living_room_workday_morning_end"
+                                },
+                                {
+                                    "entity": "input_datetime.heating_living_room_workday_evening_start"
+                                },
+                                {
+                                    "entity": "input_datetime.heating_living_room_workday_evening_end"
+                                },
+                                {
+                                    "entity": "input_datetime.heating_living_room_weekend_start"
+                                },
+                                {
+                                    "entity": "input_datetime.heating_living_room_weekend_end"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "header": {
+                                "type": "buttons",
+                                "entities": []
+                            },
+                            "title": "\u010casy topen\u00ed"
+                        },
+                        {
+                            "type": "thermostat",
+                            "entity": "climate.living_room_radiator"
+                        },
+                        {
+                            "type": "history-graph",
+                            "entities": [
+                                {
+                                    "entity": "climate.living_room_radiator"
+                                }
+                            ],
+                            "hours_to_show": 24,
+                            "refresh_interval": 0
                         }
                     ]
                 },
@@ -239,80 +313,9 @@
                             "image": "default"
                         },
                         {
-                            "type": "vertical-stack",
-                            "cards": [
-                                {
-                                    "type": "horizontal-stack",
-                                    "cards": [
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.vacuum_living_room"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.vacuum_kitchen"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.vacuum_bedroom"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.vacuum_hall"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "horizontal-stack",
-                                    "cards": [
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.vacuum_cat"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.vacuum_pantry"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.vacuum_bathroom"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.vacuum_toilet"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
                             "type": "custom:xiaomi-vacuum-map-card",
                             "entity": "vacuum.xiaomi_mop_p",
-                            "map_image": "/local/images/vacuum_map_real.png",
+                            "map_camera": "camera.xiaomi_cloud_map_extractor",
                             "calibration_points": [
                                 {
                                     "vacuum": {
@@ -344,65 +347,62 @@
                                         "y": 1760
                                     }
                                 }
-                            ],
-                            "zones": [
-                                [
-                                    [
-                                        -0.2,
-                                        -1.3,
-                                        2.5,
-                                        3.4
-                                    ]
-                                ],
-                                [
-                                    [
-                                        -0.3,
-                                        -3.6,
-                                        2.5,
-                                        -1.3
-                                    ]
-                                ],
-                                [
-                                    [
-                                        -3.2,
-                                        -2.8,
-                                        -0.3,
-                                        1.8
-                                    ]
-                                ],
-                                [
-                                    [
-                                        -1.4,
-                                        -6.8,
-                                        0,
-                                        -1.3
-                                    ]
-                                ],
-                                [
-                                    [
-                                        -3,
-                                        -6.5,
-                                        -1.4,
-                                        -5.6
-                                    ]
-                                ],
-                                [
-                                    [
-                                        -2.6,
-                                        -5.5,
-                                        -1.4,
-                                        -3.7
-                                    ]
-                                ],
-                                [
-                                    [
-                                        0,
-                                        -6.1,
-                                        2,
-                                        -4.5
-                                    ]
-                                ]
                             ]
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "script.vacuum_living_room"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "script.vacuum_kitchen"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "script.vacuum_bathroom"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "script.vacuum_bedroom"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "script.vacuum_hall"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "history-graph",
+                            "entities": [
+                                {
+                                    "entity": "vacuum.xiaomi_mop_p"
+                                }
+                            ],
+                            "hours_to_show": 24,
+                            "refresh_interval": 0
                         }
                     ]
                 },
@@ -435,6 +435,9 @@
                             "entities": [
                                 {
                                     "entity": "input_boolean.automation_tv_meter"
+                                },
+                                {
+                                    "entity": "input_boolean.automation_tv_power_on_off"
                                 },
                                 {
                                     "entity": "input_boolean.automation_plex_pause_light"
@@ -470,6 +473,25 @@
                                 }
                             ],
                             "title": "Vysava\u010d"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.someone_home"
+                                },
+                                {
+                                    "entity": "person.jiri_furda",
+                                    "icon": "mdi:face"
+                                },
+                                {
+                                    "entity": "person.vendula_cincurova",
+                                    "icon": "mdi:face-woman-outline"
+                                },
+                                {
+                                    "entity": "input_boolean.guest_presence"
+                                }
+                            ]
                         }
                     ]
                 },
@@ -721,100 +743,10 @@
                             ]
                         },
                         {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "binary_sensor.someone_home"
-                                },
-                                {
-                                    "entity": "person.jiri_furda",
-                                    "icon": "mdi:face"
-                                },
-                                {
-                                    "entity": "person.vendula_cincurova",
-                                    "icon": "mdi:face-woman-outline"
-                                },
-                                {
-                                    "entity": "input_boolean.guest_presence"
-                                }
-                            ]
-                        },
-                        {
                             "type": "custom:vacuum-card",
                             "entity": "vacuum.xiaomi_mop_p",
                             "image": "default",
                             "compact_view": false
-                        },
-                        {
-                            "type": "vertical-stack",
-                            "cards": [
-                                {
-                                    "type": "horizontal-stack",
-                                    "cards": [
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.vacuum_living_room"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.vacuum_kitchen"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.vacuum_bedroom"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.vacuum_hall"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "horizontal-stack",
-                                    "cards": [
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.vacuum_cat"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.vacuum_pantry"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.vacuum_bathroom"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.vacuum_toilet"
-                                        }
-                                    ]
-                                }
-                            ]
                         },
                         {
                             "type": "vertical-stack",
@@ -883,47 +815,11 @@
                                     ]
                                 }
                             ]
-                        },
-                        {
-                            "type": "custom:xiaomi-vacuum-map-card",
-                            "entity": "vacuum.xiaomi_mop_p",
-                            "map_camera": "camera.xiaomi_cloud_map_extractor",
-                            "calibration_points": [
-                                {
-                                    "vacuum": {
-                                        "x": -3.2,
-                                        "y": 3.4
-                                    },
-                                    "map": {
-                                        "x": 100,
-                                        "y": 300
-                                    }
-                                },
-                                {
-                                    "vacuum": {
-                                        "x": 2.5,
-                                        "y": 3.4
-                                    },
-                                    "map": {
-                                        "x": 1000,
-                                        "y": 300
-                                    }
-                                },
-                                {
-                                    "vacuum": {
-                                        "x": -3.2,
-                                        "y": -6.8
-                                    },
-                                    "map": {
-                                        "x": 100,
-                                        "y": 1760
-                                    }
-                                }
-                            ]
                         }
                     ]
                 }
-            ]
+            ],
+            "title": ""
         }
     }
 }
