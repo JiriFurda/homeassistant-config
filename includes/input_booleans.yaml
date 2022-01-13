@@ -58,8 +58,10 @@
     
 # Heating
   heating_living_room_workday_morning:
-    name: Topení obývák ráno (prac. den)
+    name: Topení obývák ráno (pracovní den)
   heating_living_room_workday_evening:
-    name: Topení obývák večer (prac. den)
+    name: Topení obývák večer (pracovní den)
   heating_living_room_weekend:
     name: Topení obývák (víkend)
+  heating_living_room_homeoffice:
+    name: Topení obývák (homeoffice)

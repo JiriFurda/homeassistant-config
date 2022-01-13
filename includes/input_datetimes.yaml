@@ -22,3 +22,7 @@
     name: Konec topení v obýváku o víkendu
     has_date: false
     has_time: true
+  heating_living_room_homeoffice_start:
+    name: Začátek topení na homeoffice
+    has_date: false
+    has_time: true

@@ -15,5 +15,15 @@
           {{ is_state('person.jiri_furda', 'home')
              or is_state('person.vendula_cincurova', 'home')
              or is_state('input_boolean.guest_presence', 'on') }}
-  - platform: workday
+  - name: workday
+    platform: workday
     country: CZ
+  - name: workday_tommorow
+    platform: workday
+    country: CZ
+    days_offset: 1
+  - platform: template
+    sensors:
+      homeoffice:
+        friendly_name: "Home Office"
+        value_template: "{{ is_state('calednar.homeoffice', 'on') }}"

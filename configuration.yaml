@@ -48,3 +48,7 @@ vacuum:
     host: 192.168.0.203
     token: !secret xiaomi_vacuum_token
     name: Xiaomi Mop P
+    
+google:
+  client_id: !secret google_id
+  client_secret: !secret google_secret

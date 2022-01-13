@@ -1,44 +1,44 @@
 - id: '1591991243529'
   name: Maximum
   entities:
-    light.living_room_light_1_light:
-      min_mireds: 153
+    light.living_room_light:
+      min_mireds: 150
       max_mireds: 500
       effect_list:
       - blink
       - breathe
-      - okay
       - channel_change
       - finish_effect
-      - stop_effect
-      brightness: 254
-      color_temp: 332
-      linkquality: 57
-      state: 'on'
-      friendly_name: living_room_light_1_light
-      supported_features: 47
-    light.living_room_light_2_light:
-      min_mireds: 153
-      max_mireds: 500
-      effect_list:
-      - blink
-      - breathe
       - okay
-      - channel_change
-      - finish_effect
       - stop_effect
-      brightness: 254
-      color_temp: 332
-      linkquality: 78
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 255
+      color_temp: 242
+      hs_color:
+      - 26.762
+      - 32.531
+      rgb_color:
+      - 255
+      - 209
+      - 172
+      xy_color:
+      - 0.412
+      - 0.363
+      entity_id:
+      - light.living_room_light_1
+      - light.living_room_light_2
+      friendly_name: Living Room Light
+      icon: mdi:lightbulb-group
+      supported_features: 44
       state: 'on'
-      friendly_name: Living Room Light 2
-      supported_features: 47
   icon: mdi:brightness-7
 - id: '1591991295351'
   name: Minimum
   entities:
-    light.living_room_light_1_light:
-      min_mireds: 153
+    light.living_room_light_1:
+      min_mireds: 150
       max_mireds: 500
       effect_list:
       - blink
@@ -47,14 +47,27 @@
       - channel_change
       - finish_effect
       - stop_effect
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
       brightness: 3
       color_temp: 500
-      linkquality: 63
-      state: 'on'
-      friendly_name: living_room_light_1_light
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 136
+      - 13
+      xy_color:
+      - 0.599
+      - 0.382
+      linkquality: 84
+      friendly_name: Living Room Light 1
       supported_features: 47
-    light.living_room_light_2_light:
-      min_mireds: 153
+      state: 'on'
+    light.living_room_light_2:
+      min_mireds: 150
       max_mireds: 500
       effect_list:
       - blink
@@ -63,12 +76,12 @@
       - channel_change
       - finish_effect
       - stop_effect
-      brightness: 3
-      color_temp: 500
-      linkquality: 76
-      state: 'on'
+      supported_color_modes:
+      - color_temp
+      linkquality: 57
       friendly_name: Living Room Light 2
       supported_features: 47
+      state: 'off'
   icon: mdi:brightness-5
 - id: '1632164707552'
   name: Sexy Time
@@ -213,3 +226,39 @@
       state: 'off'
       friendly_name: bedroom_light_rgb_light
       supported_features: 63
+- id: '1639516330243'
+  name: Bedroom low
+  entities:
+    light.bedroom_light:
+      min_mireds: 150
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - channel_change
+      - finish_effect
+      - okay
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 132
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 136
+      - 13
+      xy_color:
+      - 0.599
+      - 0.382
+      entity_id:
+      - light.bedroom_light_cct
+      - light.bedroom_light_rgb
+      friendly_name: Bedroom Light
+      icon: mdi:lightbulb-group
+      supported_features: 44
+      state: 'on'

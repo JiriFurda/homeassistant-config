@@ -45,6 +45,13 @@
                             "entity": "climate.living_room_radiator"
                         },
                         {
+                            "type": "button",
+                            "tap_action": {
+                                "action": "toggle"
+                            },
+                            "entity": "switch.christmas_tree"
+                        },
+                        {
                             "type": "vertical-stack",
                             "cards": [
                                 {
@@ -251,6 +258,9 @@
                                 },
                                 {
                                     "entity": "input_boolean.heating_living_room_weekend"
+                                },
+                                {
+                                    "entity": "input_boolean.heating_living_room_homeoffice"
                                 }
                             ],
                             "state_color": false,
@@ -261,10 +271,16 @@
                             "type": "entities",
                             "entities": [
                                 {
+                                    "entity": "input_boolean.heating_living_room_workday_morning"
+                                },
+                                {
                                     "entity": "input_datetime.heating_living_room_workday_morning_start"
                                 },
                                 {
                                     "entity": "input_datetime.heating_living_room_workday_morning_end"
+                                },
+                                {
+                                    "entity": "input_boolean.heating_living_room_workday_evening"
                                 },
                                 {
                                     "entity": "input_datetime.heating_living_room_workday_evening_start"
@@ -273,10 +289,19 @@
                                     "entity": "input_datetime.heating_living_room_workday_evening_end"
                                 },
                                 {
+                                    "entity": "input_boolean.heating_living_room_weekend"
+                                },
+                                {
                                     "entity": "input_datetime.heating_living_room_weekend_start"
                                 },
                                 {
                                     "entity": "input_datetime.heating_living_room_weekend_end"
+                                },
+                                {
+                                    "entity": "input_boolean.heating_living_room_homeoffice"
+                                },
+                                {
+                                    "entity": "input_datetime.heating_living_room_homeoffice_start"
                                 }
                             ],
                             "show_header_toggle": false,
@@ -492,53 +517,6 @@
                                     "entity": "input_boolean.guest_presence"
                                 }
                             ]
-                        }
-                    ]
-                },
-                {
-                    "path": "",
-                    "title": "Pokro\u010dil\u00e9 nastaven\u00ed",
-                    "visible": [
-                        {
-                            "user": "942bdab7a5d9420da79a07e67384448f"
-                        }
-                    ],
-                    "badges": [],
-                    "cards": [
-                        {
-                            "entities": [
-                                {
-                                    "entity": "sensor.stav_usb_zigbee"
-                                },
-                                {
-                                    "entity": "input_boolean.zigbee_permit_join"
-                                },
-                                {
-                                    "entity": "timer.zigbee_permit_join"
-                                }
-                            ],
-                            "title": "USB Zigbee",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                "sensor.cpu_temperature"
-                            ],
-                            "hours_to_show": 24,
-                            "refresh_interval": 0,
-                            "type": "history-graph"
-                        },
-                        {
-                            "type": "button",
-                            "tap_action": {
-                                "action": "toggle"
-                            },
-                            "entity": "input_boolean.party"
-                        },
-                        {
-                            "type": "markdown",
-                            "content": "\n[E.ON (elekt\u0159ina)](https://login.eon.cz/prihlaseni/e24)  \n[Yello (plyn)](https://moje.yello.cz/cs/me-yello/dashboard/)\n[Google Drive (Dokumenty)](https://drive.google.com/drive/folders/1P-nsaT41_t7cdgOQ46Bartkz5tSydyw9?usp=sharing)",
-                            "title": "Odkazy"
                         }
                     ]
                 },

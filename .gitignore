@@ -21,3 +21,6 @@ www/images/vacuum_map_real.png
 H2UJ48~R
 home-assistant_v2.db-*
 home-assistant.log.*
+*.pyc
+.google.token
+google_calendars.yaml

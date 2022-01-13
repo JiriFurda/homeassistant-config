@@ -7,6 +7,6 @@
   - platform: smartir
     name: Setobox
     unique_id: living_room_setobox
-    device_code: 1400
+    device_code: 9999
     controller_data: remote.broadlink_rm4_pro_remote
     power_sensor: binary_sensor.setobox_state
