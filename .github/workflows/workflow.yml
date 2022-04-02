@@ -15,6 +15,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
+          fetch-depth: 0
           # Make sure the actual branch is checked out when running on pull requests
           ref: ${{ github.head_ref }}
 
@@ -23,3 +24,5 @@ jobs:
         with:
           # This part is also where you can pass other options, for example:
           prettier_options: --write node-red/flows.json
+          only_changed: True
+          same_commit: True
