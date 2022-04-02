@@ -1,5 +1,6 @@
 {
     "version": 1,
+    "minor_version": 1,
     "key": "lovelace",
     "data": {
         "config": {
@@ -43,13 +44,6 @@
                         {
                             "type": "thermostat",
                             "entity": "climate.living_room_radiator"
-                        },
-                        {
-                            "type": "button",
-                            "tap_action": {
-                                "action": "toggle"
-                            },
-                            "entity": "switch.christmas_tree"
                         },
                         {
                             "type": "vertical-stack",
@@ -191,6 +185,73 @@
                         {
                             "entity": "media_player.living_room_speaker",
                             "type": "media-control"
+                        },
+                        {
+                            "type": "custom:purifier-card",
+                            "entity": "fan.mi_air_purifier_3c",
+                            "compact_view": false,
+                            "speed_entity": "number.mi_air_purifier_3c_favorite_motor_speed",
+                            "aqi": {
+                                "entity_id": "sensor.mi_air_purifier_3c_pm2_5",
+                                "unit": null
+                            },
+                            "stats": [
+                                {
+                                    "attribute": "filter_life_remaining",
+                                    "entity_id": "sensor.mi_air_purifier_3c_filter_life_remaining",
+                                    "unit": "%",
+                                    "subtitle": "Filter Remaining"
+                                },
+                                {
+                                    "attribute": "motor_speed",
+                                    "entity_id": "sensor.mi_air_purifier_3c_motor_speed",
+                                    "unit": "RPM",
+                                    "subtitle": "Motor Speed"
+                                }
+                            ],
+                            "shortcuts": [
+                                {
+                                    "name": "Silent",
+                                    "icon": "mdi:weather-night",
+                                    "preset_mode": "Silent"
+                                },
+                                {
+                                    "name": "25%",
+                                    "icon": "mdi:circle-slice-2",
+                                    "percentage": 25
+                                },
+                                {
+                                    "name": "50%",
+                                    "icon": "mdi:circle-slice-4",
+                                    "percentage": 50
+                                },
+                                {
+                                    "name": "75%",
+                                    "icon": "mdi:circle-slice-6",
+                                    "percentage": 75
+                                },
+                                {
+                                    "name": "100%",
+                                    "icon": "mdi:circle-slice-8",
+                                    "percentage": 100
+                                },
+                                {
+                                    "name": "Auto",
+                                    "icon": "mdi:brightness-auto",
+                                    "preset_mode": "Auto"
+                                }
+                            ],
+                            "show_state": false,
+                            "show_name": false,
+                            "show_toolbar": true
+                        },
+                        {
+                            "type": "entity",
+                            "entity": "sensor.mi_air_purifier_3c_motor_speed"
+                        },
+                        {
+                            "type": "entity",
+                            "entity": "number.mi_air_purifier_3c_favorite_motor_speed"
                         }
                     ]
                 },
@@ -239,6 +300,10 @@
                                     "name": "Barevn\u00e1 \u017e\u00e1rovka"
                                 }
                             ]
+                        },
+                        {
+                            "type": "thermostat",
+                            "entity": "climate.bedroom_radiator"
                         }
                     ]
                 },
@@ -320,6 +385,20 @@
                             "entities": [
                                 {
                                     "entity": "climate.living_room_radiator"
+                                }
+                            ],
+                            "hours_to_show": 24,
+                            "refresh_interval": 0
+                        },
+                        {
+                            "type": "thermostat",
+                            "entity": "climate.bedroom_radiator"
+                        },
+                        {
+                            "type": "history-graph",
+                            "entities": [
+                                {
+                                    "entity": "climate.bedroom_radiator"
                                 }
                             ],
                             "hours_to_show": 24,
