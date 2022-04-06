@@ -211,34 +211,31 @@
                             ],
                             "shortcuts": [
                                 {
-                                    "name": "Silent",
-                                    "icon": "mdi:weather-night",
-                                    "preset_mode": "Silent"
+                                    "name": "Display off",
+                                    "icon": "mdi:brightness-5",
+                                    "service": "number.set_value",
+                                    "service_data": {
+                                        "entity_id": "number.mi_air_purifier_3c_led_brightness",
+                                        "value": "0"
+                                    }
                                 },
                                 {
-                                    "name": "25%",
-                                    "icon": "mdi:circle-slice-2",
-                                    "percentage": 25
+                                    "name": "Display dim",
+                                    "icon": "mdi:brightness-6",
+                                    "service": "number.set_value",
+                                    "service_data": {
+                                        "entity_id": "number.mi_air_purifier_3c_led_brightness",
+                                        "value": "3"
+                                    }
                                 },
                                 {
-                                    "name": "50%",
-                                    "icon": "mdi:circle-slice-4",
-                                    "percentage": 50
-                                },
-                                {
-                                    "name": "75%",
-                                    "icon": "mdi:circle-slice-6",
-                                    "percentage": 75
-                                },
-                                {
-                                    "name": "100%",
-                                    "icon": "mdi:circle-slice-8",
-                                    "percentage": 100
-                                },
-                                {
-                                    "name": "Auto",
-                                    "icon": "mdi:brightness-auto",
-                                    "preset_mode": "Auto"
+                                    "name": "Display full",
+                                    "icon": "mdi:brightness-7",
+                                    "service": "number.set_value",
+                                    "service_data": {
+                                        "entity_id": "number.mi_air_purifier_3c_led_brightness",
+                                        "value": "8"
+                                    }
                                 }
                             ],
                             "show_state": false,
