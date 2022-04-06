@@ -19,11 +19,11 @@ jobs:
           # Make sure the actual branch is checked out when running on pull requests
           ref: ${{ github.head_ref }}
 
-    - name: copy file
-      uses: canastro/copy-file-action@master
-      with:
-        source: "node-red/flows.json"
-        target: "node-red/flows_pretty.json"
+      - name: copy file
+        uses: canastro/copy-file-action@master
+        with:
+          source: "node-red/flows.json"
+          target: "node-red/flows_pretty.json"
 
       - name: Prettify code
         uses: creyD/prettier_action@v4.2
