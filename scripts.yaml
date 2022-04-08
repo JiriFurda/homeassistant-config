@@ -189,7 +189,7 @@ vacuum_living_room:
         - 0
         - 1
         - 1
-        - 14
+        - 10
   mode: single
 vacuum_kitchen:
   alias: "Kuchyň"
@@ -203,7 +203,7 @@ vacuum_kitchen:
         - 0
         - 1
         - 1
-        - 10
+        - 11
   mode: single
 vacuum_bedroom:
   alias: "Ložnice"
@@ -217,7 +217,7 @@ vacuum_bedroom:
         - 0
         - 1
         - 1
-        - 12
+        - 14
   mode: single
 vacuum_hall:
   alias: "Chodba"
@@ -245,7 +245,7 @@ vacuum_bathroom:
         - 0
         - 1
         - 1
-        - 11
+        - 12
   mode: single
   
 # NodeRed shortcuts
