@@ -22,14 +22,15 @@ My personal smart home configuration. The system is running [Home Assistant](htt
 | [Broadlink RM Pro RM4](https://www.aliexpress.com/item/32793393049.html) | 1 030.69 CZK | Control Unit |
 | [Immax 07048L](https://www.alza.cz/immax-neo-smart-zasuvka-d5569071.htm) | 289 CZK | Socket |
 | [Nedis ZBHTR10WT](https://hlavice-radiatory.heureka.cz/nedis-zbhtr10wt/) | 1 349 CZK | Hearing |
-| Sum | 3 676.69 CZK | | 
+| [Mi Temperature and Humidity Monitor 2](https://www.aliexpress.com/item/4001098220232.html?spm=a2g0o.order_list.0.0.4fcb1802M1Wqfo) | 135.47 CZK | Sensor |
+| Sum | 3812.16 CZK | | 
 
 ### Bedroom
 | Device name | Price | Type |
 | --- | --- | --- |
 | [TRÅDFRI LED1732G11 + TRÅDFRI E1810](https://www.ikea.com/cz/cs/p/tradfri-sada-na-dalkove-ovladani-bile-spektrum-20406570/) | 599 CZK | Lighting, Controller |
-| [Immax 07115L](https://www.immax.cz/immax-neo-smart-zarovka-led-e27-9w-rgb-cct-barevna-a-bila-stmivatelna-zigbee-3-0.html) | 350 CZK | Lighting |
-| Sum | 940 CZK | | 
+| [LIVARNO LUX Smart Home Led Bulb E27](https://www.lidl.cz/p/livarno-lux-zigbee-3-0-smart-home-led-zarovka/p100306622) | 249 CZK | Lighting |
+| Sum | 848 CZK | | 
 
 ### Bathroom
 | Device name | Price | Type |
@@ -40,9 +41,14 @@ My personal smart home configuration. The system is running [Home Assistant](htt
 ### Unused
 | Device name | Price | Type |
 | --- | --- | --- |
-| [LIVARNO LUX Smart Home Led Bulb E27](https://www.lidl.cz/p/livarno-lux-zigbee-3-0-smart-home-led-zarovka/p100306622) | 249 CZK | Lighting |
 | [Aqara Smart Wall Switch D1 Double Button No Neutral](https://www.aliexpress.com/item/4000804886280.html | 570.43 CZK | Controller |
 | Sum | 819.43 CZK | 
+
+### Broken
+| Device name | Price | Type |
+| --- | --- | --- |
+| [Immax 07115L](https://www.immax.cz/immax-neo-smart-zarovka-led-e27-9w-rgb-cct-barevna-a-bila-stmivatelna-zigbee-3-0.html) | 350 CZK | Lighting |
+| Sum | 350 CZK | 
 
 ### Connected Devices
 * PlayStation 4

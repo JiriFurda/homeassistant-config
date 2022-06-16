@@ -52,3 +52,10 @@ vacuum:
 google:
   client_id: !secret google_id
   client_secret: !secret google_secret
+  
+ble_monitor:
+  devices:
+    # sensor
+    - mac: 'A4:C1:38:19:A0:D6'
+      name: 'Living Room Temperature Sensor'
+      encryption_key: !secret xiaomi_temp_sensor_key

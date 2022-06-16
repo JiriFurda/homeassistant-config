@@ -13,7 +13,13 @@
     command: "cat /sys/class/thermal/thermal_zone0/temp"
     unit_of_measurement: "°C"
     value_template: '{{ value | multiply(0.001) | round(1) }}'
-
+  - platform: template
+    sensors:
+      outside_temperature:
+        friendly_name: Temperature outside
+        unit_of_measurement: "°C"
+        value_template: "{{ state_attr('weather.domov', 'temperature') }}"
+    
 # Floorplan
 #  - platform: template
 #    sensors:

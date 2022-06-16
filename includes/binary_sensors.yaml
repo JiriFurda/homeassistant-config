@@ -15,6 +15,13 @@
           {{ is_state('person.jiri_furda', 'home')
              or is_state('person.vendula_cincurova', 'home')
              or is_state('input_boolean.guest_presence', 'on') }}
+      sun_living_room:
+        friendly_name: "Slunce obývací pokoj"
+        value_template: >-
+          {{ ( state_attr('sun.sun', 'azimuth') >= 50
+             and state_attr('sun.sun', 'azimuth') <= 140 ) and
+             ( is_state('weather.domov', 'sunny') or 
+             is_state('weather.domov', 'partlycloudy') ) }}
   - name: workday
     platform: workday
     country: CZ
@@ -27,3 +34,8 @@
       homeoffice:
         friendly_name: "Home Office"
         value_template: "{{ is_state('calednar.homeoffice', 'on') }}"
+  - platform: template
+    sensors:
+      pc_state:
+        friendly_name: "PC State"
+        value_template: "{{ states('sensor.pc_plug_power')|float > 20 }}"

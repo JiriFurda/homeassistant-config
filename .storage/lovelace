@@ -190,10 +190,13 @@
                             "type": "custom:purifier-card",
                             "entity": "fan.mi_air_purifier_3c",
                             "compact_view": false,
-                            "speed_entity": "number.mi_air_purifier_3c_favorite_motor_speed",
                             "aqi": {
                                 "entity_id": "sensor.mi_air_purifier_3c_pm2_5",
                                 "unit": null
+                            },
+                            "speed": {
+                                "entity_id": "number.mi_air_purifier_3c_favorite_motor_speed",
+                                "sensor_entity_id": "sensor.mi_air_purifier_3c_motor_speed"
                             },
                             "stats": [
                                 {
@@ -374,6 +377,12 @@
                             "entities": [
                                 {
                                     "entity": "climate.living_room_radiator"
+                                },
+                                {
+                                    "entity": "sensor.ble_temperature_living_room_temperature_sensor"
+                                },
+                                {
+                                    "entity": "sensor.outside_temperature"
                                 }
                             ],
                             "hours_to_show": 24,
@@ -392,6 +401,13 @@
                             ],
                             "hours_to_show": 24,
                             "refresh_interval": 0
+                        },
+                        {
+                            "hours_to_show": 24,
+                            "graph": "line",
+                            "type": "sensor",
+                            "entity": "sensor.ble_humidity_living_room_temperature_sensor",
+                            "detail": 1
                         }
                     ]
                 },
