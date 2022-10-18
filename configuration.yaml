@@ -1,11 +1,6 @@
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
-# Text to speech
-tts:
-  - platform: google_translate
-    language: 'cs'
-
 group: !include includes/groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
@@ -20,6 +15,17 @@ light: !include includes/lights.yaml
 input_select: !include includes/input_selects.yaml
 camera: !include includes/cameras.yaml
 input_datetime: !include includes/input_datetimes.yaml
+
+http:
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
+#  use_x_forwarded_for: true
+#  trusted_proxies:
+#    - 172.30.33.0/24
+
+tts:
+  - platform: google_translate
+    language: 'cs'
 
 google_assistant:
   project_id: home-assistant-new-5b1c8
@@ -39,9 +45,9 @@ device_tracker:
     hosts:
       nokia_6_2_wifi: 192.168.0.103
   
-spotify:
-  client_id: b5e9102ce29943bba9940ab3fa48a814
-  client_secret: !secret spotify_secret
+#spotify:
+#  client_id: b5e9102ce29943bba9940ab3fa48a814
+#  client_secret: !secret spotify_secret
   
 vacuum:
   - platform: miio2
@@ -49,13 +55,17 @@ vacuum:
     token: !secret xiaomi_vacuum_token
     name: Xiaomi Mop P
     
-google:
-  client_id: !secret google_id
-  client_secret: !secret google_secret
+#google:
+#  client_id: !secret google_id
+#  client_secret: !secret google_secret
   
-ble_monitor:
-  devices:
-    # sensor
-    - mac: 'A4:C1:38:19:A0:D6'
-      name: 'Living Room Temperature Sensor'
-      encryption_key: !secret xiaomi_temp_sensor_key
+mqtt:
+  sensor:
+  - name: Stav USB Zigbee
+    state_topic: "zigbee2mqtt/bridge/state"
+    icon: mdi:router-wireless   
+  - state_topic: "zigbee2mqtt/0x680ae2fffee3c000"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    icon: "mdi:signal"
+    unit_of_measurement: "lqi"
+    value_template: "{{ value_json.linkquality }}"

@@ -1,13 +1,3 @@
-  - platform: mqtt
-    name: Stav USB Zigbee
-    state_topic: "zigbee2mqtt/bridge/state"
-    icon: mdi:router-wireless   
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/0x680ae2fffee3c000"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:signal"
-    unit_of_measurement: "lqi"
-    value_template: "{{ value_json.linkquality }}"
   - platform: command_line
     name: CPU Temperature
     command: "cat /sys/class/thermal/thermal_zone0/temp"

@@ -137,95 +137,79 @@
 - id: '1632164748606'
   name: Bedroom Maximum
   entities:
-    light.bedroom_light_cct_light:
-      min_mireds: 153
+    light.bedroom_light:
+      min_mireds: 150
       max_mireds: 500
       effect_list:
       - blink
       - breathe
-      - okay
       - channel_change
       - finish_effect
-      - stop_effect
-      brightness: 254
-      color_temp: 308
-      linkquality: 52
-      state: 'on'
-      update:
-        state: available
-      update_available: true
-      friendly_name: bedroom_light_cct_light
-      supported_features: 47
-    light.bedroom_light_rgb_light:
-      min_mireds: 153
-      max_mireds: 500
-      effect_list:
-      - blink
-      - breathe
       - okay
-      - channel_change
-      - finish_effect
       - stop_effect
-      brightness: 253
-      color_temp: 324
+      supported_color_modes:
+      - color_temp
+      entity_id:
+      - light.bedroom_light_cct
+      - light.bedroom_light_rgb
+      icon: mdi:lightbulb-group
+      friendly_name: Bedroom Main Light
+      supported_features: 44
+      color_mode: color_temp
+      brightness: 255
+      color_temp: 311
       hs_color:
-      - 39.823
-      - 44.314
+      - 27.505
+      - 51.349
       rgb_color:
       - 255
-      - 216
-      - 141
+      - 184
+      - 124
       xy_color:
-      - 0.432
-      - 0.402
-      color:
-        x: 0.431344681687312
-        y: 0.402077494772728
-      linkquality: 65
+      - 0.476
+      - 0.379
       state: 'on'
-      friendly_name: bedroom_light_rgb_light
-      supported_features: 63
+  metadata:
+    light.bedroom_light:
+      entity_only: true
 - id: '1633207137096'
   name: Bedroom Minimum
   entities:
-    light.bedroom_light_cct_light:
-      min_mireds: 153
+    light.bedroom_light:
+      min_mireds: 150
       max_mireds: 500
       effect_list:
       - blink
       - breathe
-      - okay
       - channel_change
       - finish_effect
+      - okay
       - stop_effect
+      supported_color_modes:
+      - color_temp
+      entity_id:
+      - light.bedroom_light_cct
+      - light.bedroom_light_rgb
+      icon: mdi:lightbulb-group
+      friendly_name: Bedroom Main Light
+      supported_features: 44
+      color_mode: color_temp
       brightness: 3
-      color_temp: 500
-      linkquality: 81
+      color_temp: 424
+      hs_color:
+      - 29.276
+      - 77.925
+      rgb_color:
+      - 255
+      - 153
+      - 56
+      xy_color:
+      - 0.562
+      - 0.389
       state: 'on'
-      update:
-        state: available
-      update_available: true
-      friendly_name: bedroom_light_cct_light
-      supported_features: 47
-    light.bedroom_light_rgb_light:
-      min_mireds: 153
-      max_mireds: 500
-      effect_list:
-      - blink
-      - breathe
-      - okay
-      - channel_change
-      - finish_effect
-      - stop_effect
-      brightness: 254
-      color:
-        x: 0.421432843853882
-        y: 0.39814977812183
-      color_temp: 309
-      linkquality: 78
-      state: 'off'
-      friendly_name: bedroom_light_rgb_light
-      supported_features: 63
+  metadata:
+    light.bedroom_light:
+      entity_only: true
 - id: '1639516330243'
   name: Bedroom low
   entities:

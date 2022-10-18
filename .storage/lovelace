@@ -1,611 +1,561 @@
 {
-    "version": 1,
-    "minor_version": 1,
-    "key": "lovelace",
-    "data": {
-        "config": {
-            "views": [
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace",
+  "data": {
+    "config": {
+      "views": [
+        {
+          "title": "Obývací pokoj",
+          "badges": [],
+          "cards": [
+            {
+              "cards": [
                 {
-                    "title": "Ob\u00fdvac\u00ed pokoj",
-                    "badges": [],
-                    "cards": [
-                        {
-                            "cards": [
-                                {
-                                    "type": "light",
-                                    "hold_action": {
-                                        "action": "more-info"
-                                    },
-                                    "entity": "light.living_room_light"
-                                },
-                                {
-                                    "type": "vertical-stack",
-                                    "cards": [
-                                        {
-                                            "type": "entities",
-                                            "entities": [
-                                                {
-                                                    "entity": "scene.focus_mode"
-                                                },
-                                                {
-                                                    "entity": "scene.tv_time"
-                                                },
-                                                {
-                                                    "entity": "input_boolean.party"
-                                                }
-                                            ],
-                                            "title": "Sc\u00e9ny"
-                                        }
-                                    ]
-                                }
-                            ],
-                            "type": "vertical-stack"
-                        },
-                        {
-                            "type": "thermostat",
-                            "entity": "climate.living_room_radiator"
-                        },
-                        {
-                            "type": "vertical-stack",
-                            "cards": [
-                                {
-                                    "type": "horizontal-stack",
-                                    "cards": [
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "media_player.living_room_tv",
-                                            "show_name": true,
-                                            "name": "TV",
-                                            "icon": "mdi:television"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "media_player.setobox",
-                                            "show_name": true,
-                                            "name": "Setobox",
-                                            "icon": "mdi:antenna"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "media_player.playstation_4",
-                                            "show_name": true,
-                                            "name": "PS4"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.tv_input",
-                                            "show_name": true,
-                                            "name": "Input"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "horizontal-stack",
-                                    "cards": [
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "volume_up"
-                                            },
-                                            "entity": "media_player.setobox",
-                                            "show_name": true,
-                                            "name": "Vol +",
-                                            "icon": "mdi:volume-plus"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "volume_down"
-                                            },
-                                            "entity": "media_player.setobox",
-                                            "show_name": true,
-                                            "name": "Vol -",
-                                            "icon": "mdi:volume-minus"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.setobox_channel_up",
-                                            "show_name": true,
-                                            "name": "Ch +"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.setobox_channel_down",
-                                            "show_name": true,
-                                            "name": "Ch -"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "horizontal-stack",
-                                    "cards": [
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "volume_mute"
-                                            },
-                                            "entity": "media_player.setobox",
-                                            "show_name": true,
-                                            "name": "Mute",
-                                            "icon": "mdi:volume-off"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.setobox_epg",
-                                            "show_name": true,
-                                            "name": "EPG"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.meter_one",
-                                            "name": "Vendula"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.meter_two",
-                                            "show_state": false,
-                                            "show_icon": true,
-                                            "name": "Ji\u0159\u00ed"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "entity": "media_player.playstation_4",
-                            "type": "media-control"
-                        },
-                        {
-                            "entity": "media_player.living_room_speaker",
-                            "type": "media-control"
-                        },
-                        {
-                            "type": "custom:purifier-card",
-                            "entity": "fan.mi_air_purifier_3c",
-                            "compact_view": false,
-                            "aqi": {
-                                "entity_id": "sensor.mi_air_purifier_3c_pm2_5",
-                                "unit": null
-                            },
-                            "speed": {
-                                "entity_id": "number.mi_air_purifier_3c_favorite_motor_speed",
-                                "sensor_entity_id": "sensor.mi_air_purifier_3c_motor_speed"
-                            },
-                            "stats": [
-                                {
-                                    "attribute": "filter_life_remaining",
-                                    "entity_id": "sensor.mi_air_purifier_3c_filter_life_remaining",
-                                    "unit": "%",
-                                    "subtitle": "Filter Remaining"
-                                },
-                                {
-                                    "attribute": "motor_speed",
-                                    "entity_id": "sensor.mi_air_purifier_3c_motor_speed",
-                                    "unit": "RPM",
-                                    "subtitle": "Motor Speed"
-                                }
-                            ],
-                            "shortcuts": [
-                                {
-                                    "name": "Display off",
-                                    "icon": "mdi:brightness-5",
-                                    "service": "number.set_value",
-                                    "service_data": {
-                                        "entity_id": "number.mi_air_purifier_3c_led_brightness",
-                                        "value": "0"
-                                    }
-                                },
-                                {
-                                    "name": "Display dim",
-                                    "icon": "mdi:brightness-6",
-                                    "service": "number.set_value",
-                                    "service_data": {
-                                        "entity_id": "number.mi_air_purifier_3c_led_brightness",
-                                        "value": "3"
-                                    }
-                                },
-                                {
-                                    "name": "Display full",
-                                    "icon": "mdi:brightness-7",
-                                    "service": "number.set_value",
-                                    "service_data": {
-                                        "entity_id": "number.mi_air_purifier_3c_led_brightness",
-                                        "value": "8"
-                                    }
-                                }
-                            ],
-                            "show_state": false,
-                            "show_name": false,
-                            "show_toolbar": true
-                        }
-                    ]
+                  "type": "light",
+                  "hold_action": {
+                    "action": "more-info"
+                  },
+                  "entity": "light.living_room_light"
                 },
                 {
-                    "title": "Lo\u017enice",
-                    "path": "loznice",
-                    "badges": [],
-                    "cards": [
+                  "type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "entities",
+                      "entities": [
                         {
-                            "type": "vertical-stack",
-                            "cards": [
-                                {
-                                    "type": "light",
-                                    "entity": "light.bedroom_light"
-                                },
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
-                                            "entity": "scene.bedroom_maximum"
-                                        },
-                                        {
-                                            "entity": "scene.bedroom_minimum"
-                                        },
-                                        {
-                                            "entity": "scene.sexy_time"
-                                        },
-                                        {
-                                            "entity": "input_boolean.tricolor"
-                                        }
-                                    ]
-                                }
-                            ]
+                          "entity": "scene.focus_mode"
                         },
                         {
-                            "type": "horizontal-stack",
-                            "cards": [
-                                {
-                                    "type": "light",
-                                    "entity": "light.bedroom_light_cct",
-                                    "name": "B\u00edl\u00e1 \u017e\u00e1rovka"
-                                },
-                                {
-                                    "type": "light",
-                                    "entity": "light.bedroom_light_rgb",
-                                    "name": "Barevn\u00e1 \u017e\u00e1rovka"
-                                }
-                            ]
+                          "entity": "scene.tv_time"
                         },
                         {
-                            "type": "thermostat",
-                            "entity": "climate.bedroom_radiator"
+                          "entity": "input_boolean.party"
                         }
-                    ]
-                },
-                {
-                    "title": "Topen\u00ed",
-                    "path": "topeni",
-                    "badges": [],
-                    "cards": [
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "input_boolean.heating_living_room_workday_morning"
-                                },
-                                {
-                                    "entity": "input_boolean.heating_living_room_workday_evening"
-                                },
-                                {
-                                    "entity": "input_boolean.heating_living_room_weekend"
-                                },
-                                {
-                                    "entity": "input_boolean.heating_living_room_homeoffice"
-                                }
-                            ],
-                            "state_color": false,
-                            "show_header_toggle": true,
-                            "title": "Topen\u00ed"
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "input_boolean.heating_living_room_workday_morning"
-                                },
-                                {
-                                    "entity": "input_datetime.heating_living_room_workday_morning_start"
-                                },
-                                {
-                                    "entity": "input_datetime.heating_living_room_workday_morning_end"
-                                },
-                                {
-                                    "entity": "input_boolean.heating_living_room_workday_evening"
-                                },
-                                {
-                                    "entity": "input_datetime.heating_living_room_workday_evening_start"
-                                },
-                                {
-                                    "entity": "input_datetime.heating_living_room_workday_evening_end"
-                                },
-                                {
-                                    "entity": "input_boolean.heating_living_room_weekend"
-                                },
-                                {
-                                    "entity": "input_datetime.heating_living_room_weekend_start"
-                                },
-                                {
-                                    "entity": "input_datetime.heating_living_room_weekend_end"
-                                },
-                                {
-                                    "entity": "input_boolean.heating_living_room_homeoffice"
-                                },
-                                {
-                                    "entity": "input_datetime.heating_living_room_homeoffice_start"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "header": {
-                                "type": "buttons",
-                                "entities": []
-                            },
-                            "title": "\u010casy topen\u00ed"
-                        },
-                        {
-                            "type": "thermostat",
-                            "entity": "climate.living_room_radiator"
-                        },
-                        {
-                            "type": "history-graph",
-                            "entities": [
-                                {
-                                    "entity": "climate.living_room_radiator"
-                                },
-                                {
-                                    "entity": "sensor.ble_temperature_living_room_temperature_sensor"
-                                },
-                                {
-                                    "entity": "sensor.outside_temperature"
-                                }
-                            ],
-                            "hours_to_show": 24,
-                            "refresh_interval": 0
-                        },
-                        {
-                            "type": "thermostat",
-                            "entity": "climate.bedroom_radiator"
-                        },
-                        {
-                            "type": "history-graph",
-                            "entities": [
-                                {
-                                    "entity": "climate.bedroom_radiator"
-                                }
-                            ],
-                            "hours_to_show": 24,
-                            "refresh_interval": 0
-                        },
-                        {
-                            "hours_to_show": 24,
-                            "graph": "line",
-                            "type": "sensor",
-                            "entity": "sensor.ble_humidity_living_room_temperature_sensor",
-                            "detail": 1
-                        }
-                    ]
-                },
-                {
-                    "title": "Byt",
-                    "path": "byt",
-                    "badges": [],
-                    "cards": [
-                        {
-                            "type": "custom:vacuum-card",
-                            "entity": "vacuum.xiaomi_mop_p",
-                            "image": "default"
-                        },
-                        {
-                            "type": "custom:xiaomi-vacuum-map-card",
-                            "entity": "vacuum.xiaomi_mop_p",
-                            "map_camera": "camera.xiaomi_cloud_map_extractor",
-                            "calibration_points": [
-                                {
-                                    "vacuum": {
-                                        "x": -3.2,
-                                        "y": 3.4
-                                    },
-                                    "map": {
-                                        "x": 100,
-                                        "y": 300
-                                    }
-                                },
-                                {
-                                    "vacuum": {
-                                        "x": 2.5,
-                                        "y": 3.4
-                                    },
-                                    "map": {
-                                        "x": 1000,
-                                        "y": 300
-                                    }
-                                },
-                                {
-                                    "vacuum": {
-                                        "x": -3.2,
-                                        "y": -6.8
-                                    },
-                                    "map": {
-                                        "x": 100,
-                                        "y": 1760
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "vertical-stack",
-                            "cards": [
-                                {
-                                    "type": "horizontal-stack",
-                                    "cards": [
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.vacuum_living_room"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.vacuum_kitchen"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.vacuum_bathroom"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.vacuum_bedroom"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.vacuum_hall"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "type": "history-graph",
-                            "entities": [
-                                {
-                                    "entity": "vacuum.xiaomi_mop_p"
-                                }
-                            ],
-                            "hours_to_show": 24,
-                            "refresh_interval": 0
-                        }
-                    ]
-                },
-                {
-                    "title": "Nastaven\u00ed",
-                    "path": "nastaveni",
-                    "badges": [],
-                    "cards": [
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "input_boolean.dnd"
-                                }
-                            ],
-                            "title": "Stavy"
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "input_boolean.automation_dnd"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "title": "Z\u00e1kladn\u00ed"
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "input_boolean.automation_tv_meter"
-                                },
-                                {
-                                    "entity": "input_boolean.automation_tv_power_on_off"
-                                },
-                                {
-                                    "entity": "input_boolean.automation_plex_pause_light"
-                                },
-                                {
-                                    "entity": "input_boolean.automation_ps4_light"
-                                }
-                            ],
-                            "title": "M\u00e9dia",
-                            "show_header_toggle": true
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "input_boolean.automation_washing_machine"
-                                },
-                                {
-                                    "entity": "switch.adguard_protection",
-                                    "name": "Blokov\u00e1n\u00ed reklam"
-                                }
-                            ],
-                            "title": "Dal\u0161\u00ed"
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "input_boolean.automation_vacuum_start"
-                                },
-                                {
-                                    "entity": "input_boolean.automation_vacuum_mode"
-                                }
-                            ],
-                            "title": "Vysava\u010d"
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "binary_sensor.someone_home"
-                                },
-                                {
-                                    "entity": "person.jiri_furda",
-                                    "icon": "mdi:face"
-                                },
-                                {
-                                    "entity": "person.vendula_cincurova",
-                                    "icon": "mdi:face-woman-outline"
-                                },
-                                {
-                                    "entity": "input_boolean.guest_presence"
-                                }
-                            ]
-                        }
-                    ]
+                      ],
+                      "title": "Scény"
+                    }
+                  ]
                 }
-            ],
-            "title": "Obecn\u00e9"
+              ],
+              "type": "vertical-stack"
+            },
+            {
+              "type": "thermostat",
+              "entity": "climate.living_room_radiator"
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "horizontal-stack",
+                  "cards": [
+                    {
+                      "type": "button",
+                      "tap_action": {
+                        "action": "toggle"
+                      },
+                      "entity": "media_player.living_room_tv",
+                      "show_name": true,
+                      "name": "TV",
+                      "icon": "mdi:television"
+                    },
+                    {
+                      "type": "button",
+                      "tap_action": {
+                        "action": "toggle"
+                      },
+                      "entity": "media_player.setobox",
+                      "show_name": true,
+                      "name": "Setobox",
+                      "icon": "mdi:antenna"
+                    },
+                    {
+                      "type": "button",
+                      "tap_action": {
+                        "action": "toggle"
+                      },
+                      "entity": "media_player.playstation_4",
+                      "show_name": true,
+                      "name": "PS4"
+                    },
+                    {
+                      "type": "button",
+                      "tap_action": {
+                        "action": "toggle"
+                      },
+                      "entity": "script.tv_input",
+                      "show_name": true,
+                      "name": "Input"
+                    }
+                  ]
+                },
+                {
+                  "type": "horizontal-stack",
+                  "cards": [
+                    {
+                      "type": "button",
+                      "tap_action": {
+                        "action": "volume_up"
+                      },
+                      "entity": "media_player.setobox",
+                      "show_name": true,
+                      "name": "Vol +",
+                      "icon": "mdi:volume-plus"
+                    },
+                    {
+                      "type": "button",
+                      "tap_action": {
+                        "action": "volume_down"
+                      },
+                      "entity": "media_player.setobox",
+                      "show_name": true,
+                      "name": "Vol -",
+                      "icon": "mdi:volume-minus"
+                    },
+                    {
+                      "type": "button",
+                      "tap_action": {
+                        "action": "toggle"
+                      },
+                      "entity": "script.setobox_channel_up",
+                      "show_name": true,
+                      "name": "Ch +"
+                    },
+                    {
+                      "type": "button",
+                      "tap_action": {
+                        "action": "toggle"
+                      },
+                      "entity": "script.setobox_channel_down",
+                      "show_name": true,
+                      "name": "Ch -"
+                    }
+                  ]
+                },
+                {
+                  "type": "horizontal-stack",
+                  "cards": [
+                    {
+                      "type": "button",
+                      "tap_action": {
+                        "action": "volume_mute"
+                      },
+                      "entity": "media_player.setobox",
+                      "show_name": true,
+                      "name": "Mute",
+                      "icon": "mdi:volume-off"
+                    },
+                    {
+                      "type": "button",
+                      "tap_action": {
+                        "action": "toggle"
+                      },
+                      "entity": "script.setobox_epg",
+                      "show_name": true,
+                      "name": "EPG"
+                    },
+                    {
+                      "type": "button",
+                      "tap_action": {
+                        "action": "toggle"
+                      },
+                      "entity": "script.meter_one",
+                      "name": "Vendula"
+                    },
+                    {
+                      "type": "button",
+                      "tap_action": {
+                        "action": "toggle"
+                      },
+                      "entity": "script.meter_two",
+                      "show_state": false,
+                      "show_icon": true,
+                      "name": "Jiří"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "entity": "media_player.playstation_4",
+              "type": "media-control"
+            },
+            {
+              "entity": "media_player.living_room_speaker",
+              "type": "media-control"
+            },
+            {
+              "type": "custom:purifier-card",
+              "entity": "fan.mi_air_purifier_3c",
+              "compact_view": false,
+              "aqi": {
+                "entity_id": "sensor.mi_air_purifier_3c_pm2_5",
+                "unit": null
+              },
+              "speed": {
+                "entity_id": "number.mi_air_purifier_3c_favorite_motor_speed",
+                "sensor_entity_id": "sensor.mi_air_purifier_3c_motor_speed"
+              },
+              "stats": [
+                {
+                  "attribute": "filter_life_remaining",
+                  "entity_id": "sensor.mi_air_purifier_3c_filter_life_remaining",
+                  "unit": "%",
+                  "subtitle": "Filter Remaining"
+                },
+                {
+                  "attribute": "motor_speed",
+                  "entity_id": "sensor.mi_air_purifier_3c_motor_speed",
+                  "unit": "RPM",
+                  "subtitle": "Motor Speed"
+                }
+              ],
+              "shortcuts": [
+                {
+                  "name": "Display off",
+                  "icon": "mdi:brightness-5",
+                  "service": "number.set_value",
+                  "service_data": {
+                    "entity_id": "number.mi_air_purifier_3c_led_brightness",
+                    "value": "0"
+                  }
+                },
+                {
+                  "name": "Display dim",
+                  "icon": "mdi:brightness-6",
+                  "service": "number.set_value",
+                  "service_data": {
+                    "entity_id": "number.mi_air_purifier_3c_led_brightness",
+                    "value": "3"
+                  }
+                },
+                {
+                  "name": "Display full",
+                  "icon": "mdi:brightness-7",
+                  "service": "number.set_value",
+                  "service_data": {
+                    "entity_id": "number.mi_air_purifier_3c_led_brightness",
+                    "value": "8"
+                  }
+                }
+              ],
+              "show_state": false,
+              "show_name": false,
+              "show_toolbar": true
+            }
+          ]
+        },
+        {
+          "title": "Ložnice",
+          "path": "loznice",
+          "badges": [],
+          "cards": [
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "light",
+                  "entity": "light.bedroom_light"
+                },
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "scene.bedroom_maximum"
+                    },
+                    {
+                      "entity": "scene.bedroom_minimum"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "horizontal-stack",
+              "cards": [
+                {
+                  "type": "light",
+                  "entity": "light.bedroom_light_cct",
+                  "name": "Bílá žárovka"
+                },
+                {
+                  "type": "light",
+                  "entity": "light.bedroom_light_rgb",
+                  "name": "Barevná žárovka"
+                }
+              ]
+            },
+            {
+              "type": "thermostat",
+              "entity": "climate.bedroom_radiator"
+            }
+          ]
+        },
+        {
+          "title": "Topení",
+          "path": "topeni",
+          "badges": [],
+          "cards": [
+            {
+              "type": "thermostat",
+              "entity": "climate.living_room_radiator"
+            },
+            {
+              "type": "thermostat",
+              "entity": "climate.bedroom_radiator"
+            },
+            {
+              "type": "custom:scheduler-card",
+              "include": [
+                "climate.bedroom_radiator",
+                "climate.living_room_radiator"
+              ],
+              "exclude": [],
+              "title": "Topení"
+            },
+            {
+              "type": "history-graph",
+              "entities": [
+                {
+                  "entity": "climate.living_room_radiator"
+                },
+                {
+                  "entity": "sensor.outside_temperature"
+                }
+              ],
+              "hours_to_show": 24,
+              "refresh_interval": 0
+            },
+            {
+              "type": "history-graph",
+              "entities": [
+                {
+                  "entity": "climate.bedroom_radiator"
+                },
+                {
+                  "entity": "sensor.outside_temperature"
+                }
+              ],
+              "hours_to_show": 24,
+              "refresh_interval": 0
+            },
+            {
+              "hours_to_show": 24,
+              "graph": "line",
+              "type": "sensor",
+              "entity": "sensor.ble_humidity_living_room_temperature_sensor",
+              "detail": 1
+            },
+            {
+              "type": "history-graph",
+              "entities": [
+                {
+                  "entity": "sensor.bedroom_temperature_humidity_sensor_humidity"
+                },
+                {
+                  "entity": "sensor.living_room_temperature_humidity_sensor_humidity"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Byt",
+          "path": "byt",
+          "badges": [],
+          "cards": [
+            {
+              "type": "custom:vacuum-card",
+              "entity": "vacuum.xiaomi_mop_p",
+              "image": "default"
+            },
+            {
+              "type": "custom:xiaomi-vacuum-map-card",
+              "entity": "vacuum.xiaomi_mop_p",
+              "map_camera": "camera.xiaomi_cloud_map_extractor",
+              "calibration_points": [
+                {
+                  "vacuum": {
+                    "x": -3.2,
+                    "y": 3.4
+                  },
+                  "map": {
+                    "x": 100,
+                    "y": 300
+                  }
+                },
+                {
+                  "vacuum": {
+                    "x": 2.5,
+                    "y": 3.4
+                  },
+                  "map": {
+                    "x": 1000,
+                    "y": 300
+                  }
+                },
+                {
+                  "vacuum": {
+                    "x": -3.2,
+                    "y": -6.8
+                  },
+                  "map": {
+                    "x": 100,
+                    "y": 1760
+                  }
+                }
+              ]
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "horizontal-stack",
+                  "cards": [
+                    {
+                      "type": "button",
+                      "tap_action": {
+                        "action": "toggle"
+                      },
+                      "entity": "script.vacuum_living_room"
+                    },
+                    {
+                      "type": "button",
+                      "tap_action": {
+                        "action": "toggle"
+                      },
+                      "entity": "script.vacuum_kitchen"
+                    },
+                    {
+                      "type": "button",
+                      "tap_action": {
+                        "action": "toggle"
+                      },
+                      "entity": "script.vacuum_bathroom"
+                    },
+                    {
+                      "type": "button",
+                      "tap_action": {
+                        "action": "toggle"
+                      },
+                      "entity": "script.vacuum_bedroom"
+                    },
+                    {
+                      "type": "button",
+                      "tap_action": {
+                        "action": "toggle"
+                      },
+                      "entity": "script.vacuum_hall"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "history-graph",
+              "entities": [
+                {
+                  "entity": "vacuum.xiaomi_mop_p"
+                }
+              ],
+              "hours_to_show": 24,
+              "refresh_interval": 0
+            }
+          ]
+        },
+        {
+          "title": "Nastavení",
+          "path": "nastaveni",
+          "badges": [],
+          "cards": [
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "input_boolean.dnd"
+                }
+              ],
+              "title": "Stavy"
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "input_boolean.automation_dnd"
+                }
+              ],
+              "show_header_toggle": false,
+              "title": "Základní"
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "input_boolean.automation_tv_meter"
+                },
+                {
+                  "entity": "input_boolean.automation_tv_power_on_off"
+                },
+                {
+                  "entity": "input_boolean.automation_plex_pause_light"
+                },
+                {
+                  "entity": "input_boolean.automation_ps4_light"
+                }
+              ],
+              "title": "Média",
+              "show_header_toggle": true
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "input_boolean.automation_washing_machine"
+                },
+                {
+                  "entity": "switch.adguard_protection",
+                  "name": "Blokování reklam"
+                }
+              ],
+              "title": "Další"
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "input_boolean.automation_vacuum_start"
+                },
+                {
+                  "entity": "input_boolean.automation_vacuum_mode"
+                }
+              ],
+              "title": "Vysavač"
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "binary_sensor.someone_home"
+                },
+                {
+                  "entity": "person.jiri_furda",
+                  "icon": "mdi:face"
+                },
+                {
+                  "entity": "person.vendula_cincurova",
+                  "icon": "mdi:face-woman-outline"
+                },
+                {
+                  "entity": "input_boolean.guest_presence"
+                }
+              ]
+            }
+          ]
         }
+      ],
+      "title": "Obecné"
     }
+  }
 }
