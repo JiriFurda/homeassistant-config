@@ -1,0 +1,14 @@
+homeassistant: true
+mqtt:
+  server: mqtt://192.168.0.200:1883
+  user: mqtt
+  password: hb$<&KB$A2$2gN-y
+serial:
+  port: /dev/ttyACM0
+frontend:
+  port: 8099
+devices:
+  '0xb4e3f9fffeb97ea8':
+    friendly_name: '0xb4e3f9fffeb97ea8'
+  '0x5c0272fffedd3e44':
+    friendly_name: '0x5c0272fffedd3e44'

@@ -57,7 +57,7 @@ meter_two:
       device: TV meter
       command: Two
   mode: single
-  icon: mdi:face
+  icon: mdi:face-man
 tv_toggle_meter_one:
   alias: Tv Toggle + Meter One
   sequence:
@@ -175,84 +175,154 @@ lights_party:
           - 255
           brightness: 255
       - delay: 0.35
-
-# Vacuum
 vacuum_living_room:
-  alias: "Obývák"
-  icon: "mdi:sofa"
+  alias: Obývák
+  icon: mdi:sofa
   sequence:
   - service: vacuum.send_command
     data:
       entity_id: vacuum.xiaomi_mop_p
       command: set_mode_withroom
       params:
-        - 0
-        - 1
-        - 1
-        - 10
+      - 0
+      - 1
+      - 1
+      - 14
   mode: single
 vacuum_kitchen:
-  alias: "Kuchyň"
-  icon: "mdi:silverware-fork-knife"
+  alias: Kuchyň
+  icon: mdi:silverware-fork-knife
   sequence:
   - service: vacuum.send_command
     data:
       entity_id: vacuum.xiaomi_mop_p
       command: set_mode_withroom
       params:
-        - 0
-        - 1
-        - 1
-        - 11
+      - 0
+      - 1
+      - 1
+      - 10
   mode: single
 vacuum_bedroom:
-  alias: "Ložnice"
-  icon: "mdi:bed"
+  alias: Ložnice
+  icon: mdi:bed
   sequence:
   - service: vacuum.send_command
     data:
       entity_id: vacuum.xiaomi_mop_p
       command: set_mode_withroom
       params:
-        - 0
-        - 1
-        - 1
-        - 14
+      - 0
+      - 1
+      - 1
+      - 12
   mode: single
 vacuum_hall:
-  alias: "Chodba"
-  icon: "mdi:road"
+  alias: Chodba
+  icon: mdi:road
   sequence:
   - service: vacuum.send_command
     data:
       entity_id: vacuum.xiaomi_mop_p
       command: set_mode_withroom
       params:
-        - 0
-        - 1
-        - 1
-        - 13
+      - 0
+      - 1
+      - 1
+      - 13
   mode: single
 vacuum_bathroom:
-  alias: "Koupelna"
-  icon: "mdi:shower"
+  alias: Koupelna
+  icon: mdi:shower
   sequence:
   - service: vacuum.send_command
     data:
       entity_id: vacuum.xiaomi_mop_p
       command: set_mode_withroom
       params:
-        - 0
-        - 1
-        - 1
-        - 12
+      - 0
+      - 1
+      - 1
+      - 11
   mode: single
-  
-# NodeRed shortcuts
-#vacuum_living_room:
-#  alias: "Obývák"
-#  icon: "mdi:sofa"
-#  sequence:
-#    - service: input_boolean.turn_on
-#      data:
-#        entity_id: input_boolean.vacuum_living_room
+ps4_ps:
+  alias: PS4 Button
+  sequence:
+  - service: ps4.send_command
+    data:
+      entity_id: media_player.playstation_4
+      command: ps
+  mode: single
+  icon: mdi:sony-playstation
+ps4_ps_hold:
+  alias: PS4 Button Hold
+  sequence:
+  - service: ps4.send_command
+    data:
+      entity_id: media_player.playstation_4
+      command: ps_hold
+  mode: single
+  icon: mdi:sony-playstation
+ps4_up:
+  alias: PS4 Up
+  sequence:
+  - service: ps4.send_command
+    data:
+      entity_id: media_player.playstation_4
+      command: up
+  mode: single
+  icon: mdi:arrow-up
+ps4_down:
+  alias: PS4 Down
+  sequence:
+  - service: ps4.send_command
+    data:
+      entity_id: media_player.playstation_4
+      command: down
+  mode: single
+  icon: mdi:arrow-down
+ps4_left:
+  alias: PS4 Left
+  sequence:
+  - service: ps4.send_command
+    data:
+      entity_id: media_player.playstation_4
+      command: left
+  mode: single
+  icon: mdi:arrow-left
+ps4_right:
+  alias: PS4 Right
+  sequence:
+  - service: ps4.send_command
+    data:
+      entity_id: media_player.playstation_4
+      command: right
+  mode: single
+  icon: mdi:arrow-right
+ps4_back:
+  alias: PS4 Back
+  sequence:
+  - service: ps4.send_command
+    data:
+      entity_id: media_player.playstation_4
+      command: back
+  mode: single
+  icon: mdi:arrow-u-left-top
+ps4_enter:
+  alias: PS4 Enter
+  sequence:
+  - service: ps4.send_command
+    data:
+      entity_id: media_player.playstation_4
+      command: enter
+  mode: single
+  icon: mdi:check
+ps4_options:
+  alias: PS4 Options
+  sequence:
+  - service: ps4.send_command
+    data:
+      entity_id: media_player.playstation_4
+      command: option
+  mode: single
+  icon: mdi:menu

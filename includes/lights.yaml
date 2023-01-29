@@ -8,5 +8,5 @@
     name: Bedroom Main Light
     unique_id: bedroom_light
     entities:
-      - light.bedroom_light_cct
-      - light.bedroom_light_rgb
+      - light.bedroom_light_1
+      - light.bedroom_light_2

@@ -2,13 +2,14 @@ import asyncio
 import logging
 
 from homeassistant.core import callback
+from homeassistant.const import STATE_OFF
 
 _LOGGER = logging.getLogger(__name__)
 
 
 @callback
 async def trigger_window_change(self, event) -> None:
-    """Triggerd by window sensor event from HA to check if the window is open.
+    """Triggered by window sensor event from HA to check if the window is open.
 
     Parameters
     ----------
@@ -38,6 +39,10 @@ async def trigger_window_change(self, event) -> None:
                 "better_thermostat %s: Window sensor state is unknown, assuming window is open",
                 self.name,
             )
+
+        # window was opened, disable heating power calculation for this period
+        self.heating_start_temp = None
+        self.async_write_ha_state()
     elif new_state == "off":
         new_window_open = False
     else:
@@ -52,14 +57,6 @@ async def trigger_window_change(self, event) -> None:
             f"better_thermostat {self.name}: Window state did not change, skipping event"
         )
         return
-
-    try:
-        if self.window_queue_task.qsize() > 0:
-            while self.window_queue_task.qsize() > 1:
-                self.window_queue_task.task_done()
-    except AttributeError:
-        pass
-
     await self.window_queue_task.put(new_window_open)
 
 
@@ -67,17 +64,27 @@ async def window_queue(self):
     while True:
         window_event_to_process = await self.window_queue_task.get()
         if window_event_to_process is not None:
-            await asyncio.sleep(self.window_delay)
+            if window_event_to_process:
+                # TODO: window open delay
+                await asyncio.sleep(self.window_delay)
+            else:
+                # TODO: window close delay
+                await asyncio.sleep(self.window_delay)
             # remap off on to true false
             current_window_state = True
-            if self.hass.states.get(self.window_id).state == "off":
+            if self.hass.states.get(self.window_id).state == STATE_OFF:
                 current_window_state = False
             # make sure the current state is the suggested change state to prevent a false positive:
             if current_window_state == window_event_to_process:
-                _LOGGER.info(
-                    f"better_thermostat {self.name}: processing window changed {current_window_state} {window_event_to_process}"
-                )
                 self.window_open = window_event_to_process
                 self.async_write_ha_state()
+                if not self.control_queue_task.empty():
+                    empty_queue(self.control_queue_task)
                 await self.control_queue_task.put(self)
         self.window_queue_task.task_done()
+
+
+def empty_queue(q: asyncio.Queue):
+    for _ in range(q.qsize()):
+        q.get_nowait()
+        q.task_done()

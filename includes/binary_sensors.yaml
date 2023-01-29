@@ -33,9 +33,26 @@
     sensors:
       homeoffice:
         friendly_name: "Home Office"
-        value_template: "{{ is_state('calednar.homeoffice', 'on') }}"
+        value_template: "{{ is_state('calendar.homeoffice', 'on') }}"
   - platform: template
     sensors:
       pc_state:
         friendly_name: "PC State"
         value_template: "{{ states('sensor.pc_plug_power')|float > 20 }}"
+  - platform: template
+    sensors:
+      heat_like_workday:
+        friendly_name: "Heating like workday"
+        value_template: >-
+            {{
+                is_state('binary_sensor.workday', 'on')
+                and is_state('binary_sensor.homeoffice', 'off') 
+                
+            }}
+      heat_like_weekend:
+        friendly_name: "Heating like weekend"
+        value_template: >-
+            {{
+                is_state('binary_sensor.workday', 'off') or 
+                is_state('binary_sensor.homeoffice', 'on')
+            }}

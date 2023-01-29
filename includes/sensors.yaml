@@ -9,6 +9,13 @@
         friendly_name: Temperature outside
         unit_of_measurement: "°C"
         value_template: "{{ state_attr('weather.domov', 'temperature') }}"
+      vacuum_cleaning:
+        friendly_name: Vacuum cleaning
+        value_template: "{% if state_attr('vacuum.xiaomi_mop_p', 'run_state') == 3 %} on {% else %} off {% endif %}"
+      humidity_outside:
+        friendly_name: Humidity outside
+        unit_of_measurement: "%"
+        value_template: "{{ state_attr('weather.domov', 'humidity') }}"
     
 # Floorplan
 #  - platform: template

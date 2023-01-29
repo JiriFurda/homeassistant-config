@@ -42,26 +42,32 @@
     
 # Vacuum rooms
   vacuum_living_room:
+    name: Obývák
+    icon: mdi:sofa
     initial: off
   vacuum_kitchen:
+    name: Kuchyň
+    icon: mdi:silverware-fork-knife
     initial: off
   vacuum_bedroom:
+    name: Ložnice
+    icon: mdi:bed
     initial: off
   vacuum_hall:
-    initial: off
-  vacuum_pantry:
-    initial: off
-  vacuum_toilet:
+    name: Chodba
+    icon: mdi:road
     initial: off
   vacuum_bathroom:
+    name: Koupelna
+    icon: mdi:shower
     initial: off
     
 # Heating
-  heating_living_room_workday_morning:
-    name: Topení obývák ráno (pracovní den)
-  heating_living_room_workday_evening:
-    name: Topení obývák večer (pracovní den)
-  heating_living_room_weekend:
-    name: Topení obývák (víkend)
-  heating_living_room_homeoffice:
-    name: Topení obývák (homeoffice)
+#  heating_living_room_workday_morning:
+#    name: Topení obývák ráno (pracovní den)
+#  heating_living_room_workday_evening:
+#    name: Topení obývák večer (pracovní den)
+#  heating_living_room_weekend:
+#    name: Topení obývák (víkend)
+#  heating_living_room_homeoffice:
+#    name: Topení obývák (homeoffice)
